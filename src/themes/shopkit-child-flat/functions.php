@@ -1,8 +1,6 @@
 <?php
 
 // Hi! Start coding below!
-use gg7\woocommerce\StockStatus;
-use yii1\framework\utils\FileHelper;
 
 require_once __DIR__ . '/functions/checkout/fields.php';
 require_once __DIR__ . '/functions/checkout/order_meta.php';
@@ -10,9 +8,6 @@ require_once __DIR__ . '/functions/checkout/layout.php';
 require_once __DIR__ . '/functions/_compat.php';
 require_once __DIR__ . '/functions/archive.php';
 require_once __DIR__ . '/functions/assets.php';
-//if (!GG7_MODE_DEV) {
-//    require_once __DIR__ . '/functions/cache.php';
-//}
 require_once __DIR__ . '/functions/menu.php';
 require_once __DIR__ . '/functions/product_empty_prices.php';
 require_once __DIR__ . '/functions/shipping.php';
@@ -47,9 +42,9 @@ include 'functions/voucher_field.php';
  * Add scripts for checkout
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('livequery', get_stylesheet_directory_uri() . '/js/vendor/jquery.livequery.min.js');
-    wp_enqueue_script('sticky-kit', get_stylesheet_directory_uri() . '/js/vendor/sticky-kit.min.js');
-    wp_enqueue_script('gg7', get_stylesheet_directory_uri() . '/assets/gg7.js');
+    wp_enqueue_script('livequery', get_stylesheet_directory_uri() . '/src/js/vendor/jquery.livequery.min.js');
+    wp_enqueue_script('sticky-kit', get_stylesheet_directory_uri() . '/src/js/vendor/sticky-kit.min.js');
+    // wp_enqueue_script('gg7', get_stylesheet_directory_uri() . '/assets/gg7.js');
 //    wp_enqueue_script('webslidemenu', get_stylesheet_directory_uri() . '/assets/webslide-mobile-js/webslidemenu/webslidemenu.js');
     wp_enqueue_script('webslidemenu', get_stylesheet_directory_uri() . '/assets/webslide-flyout/webslidemenu/webslidemenu.js');
 });
