@@ -1,0 +1,17 @@
+/* Skew Forward */
+& > a {
+	.hacks();
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"transform, background-color");
+	.prefixed(transform-origin, 0 100%);
+}
+
+&:hover > a,
+&:focus > a,
+&:active > a,
+&.current-menu-ancestor > a,
+&.current-menu-item > a,
+&.current_page_item > a {
+	.prefixed(transform, skew(-10deg));
+	background-color:@activeColor;
+}

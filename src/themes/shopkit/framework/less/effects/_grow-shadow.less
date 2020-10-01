@@ -1,0 +1,19 @@
+/* Grow Shadow */
+& > a {
+	.hacks();
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"box-shadow, transform, background-color");
+	position:relative;
+}
+
+&:hover > a,
+&:focus > a,
+&:active > a,
+&.current-menu-ancestor > a,
+&.current-menu-item > a,
+&.current_page_item > a {
+	box-shadow: 0 10px 10px -10px @shadowColor;
+	.prefixed(transform, scale(1.1));
+	background-color:@activeColor;
+	z-index:1;
+}

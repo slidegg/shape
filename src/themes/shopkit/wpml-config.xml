@@ -1,0 +1,16 @@
+<wpml-config>
+	<custom-fields>
+		<custom-field action="translate">_shopkit_short_description</custom-field>
+		<custom-field action="ignore">_shopkit_sidebar_layout</custom-field>
+		<custom-field action="ignore">_shopkit_page_title</custom-field>
+		<custom-field action="copy">_shopkit_post_gallery</custom-field>
+		<custom-field action="copy">_shopkit_post_video_mp4</custom-field>
+		<custom-field action="copy">_shopkit_post_video_ogg</custom-field>
+		<custom-field action="copy">_shopkit_post_video</custom-field>
+		<custom-field action="copy">_shopkit_post_audio_mpeg</custom-field>
+		<custom-field action="copy">_shopkit_post_audio_ogg</custom-field>
+		<custom-field action="copy">_shopkit_post_audio</custom-field>
+		<custom-field action="translate">_shopkit_post_link</custom-field>
+		<custom-field action="translate">_shopkit_post_quote</custom-field>
+	</custom-fields>
+</wpml-config>

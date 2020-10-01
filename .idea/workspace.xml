@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="84722e18-0464-4cb9-86a3-5142a0c3e67a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/my-site/js/plugins.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/.stylelintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/.stylelintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/404.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/404.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/archive.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/archive.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/inc/custom-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/inc/custom-header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/inc/customizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/inc/customizer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/inc/jetpack.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/inc/jetpack.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/inc/template-functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/inc/template-functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/inc/template-tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/inc/template-tags.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/js/main.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/js/main.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/js/plugins.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/languages/my-site.pot" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/languages/my-site.pot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/languages/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/languages/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/layouts/content-sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/layouts/content-sidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/layouts/sidebar-content.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/layouts/sidebar-content.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/phpcs.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/phpcs.xml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/screenshot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/screenshot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/single.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/js/plugins/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/js/plugins/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/_normalize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/_normalize.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/elements/_elements.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/elements/_elements.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/elements/_lists.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/elements/_lists.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/elements/_tables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/elements/_tables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/forms/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/forms/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/forms/_fields.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/forms/_fields.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/forms/_forms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/forms/_forms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/layout/_content-sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/layout/_content-sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/layout/_no-sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/layout/_no-sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/layout/_sidebar-content.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/layout/_sidebar-content.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/media/_captions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/media/_captions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/media/_galleries.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/media/_galleries.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/media/_media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/media/_media.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/mixins/_mixins-master.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/mixins/_mixins-master.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/modules/_accessibility.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/modules/_accessibility.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/modules/_alignments.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/modules/_alignments.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/modules/_clearings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/modules/_clearings.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/modules/_infinite-scroll.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/modules/_infinite-scroll.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/navigation/_links.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/navigation/_links.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/navigation/_menus.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/navigation/_menus.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/navigation/_navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/navigation/_navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/site/_site.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/site/_site.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/site/primary/_comments.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/site/primary/_comments.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/site/primary/_posts-and-pages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/site/primary/_posts-and-pages.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/site/secondary/_widgets.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/site/secondary/_widgets.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/typography/_copy.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/typography/_copy.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/typography/_headings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/typography/_headings.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/typography/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/typography/_typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/variables-site/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/variables-site/_colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/variables-site/_columns.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/variables-site/_columns.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/variables-site/_structure.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/variables-site/_structure.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/variables-site/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/variables-site/_typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/src/sass/variables-site/_variables-site.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/src/sass/variables-site/_variables-site.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/template-parts/content-none.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/template-parts/content-none.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/template-parts/content-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/template-parts/content-page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/template-parts/content-search.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/template-parts/content-search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/my-site/template-parts/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/my-site/template-parts/content.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iHgkBLdyyvCZ5dOfhv5NBPeOoE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/themes/shopkit-child-flat/src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84722e18-0464-4cb9-86a3-5142a0c3e67a" name="Default Changelist" comment="" />
+      <created>1601570071529</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601570071529</updated>
+      <workItem from="1601570073049" duration="2848000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="155" y="125" width="1111" height="543" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601572062542">
+      <screen x="55" y="27" width="1311" height="741" />
+    </state>
+    <state x="155" y="125" width="1111" height="543" key="com.intellij.history.integration.ui.views.FileHistoryDialog/55.27.1311.741@55.27.1311.741" timestamp="1601572062542" />
+  </component>
+</project>

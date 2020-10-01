@@ -1,0 +1,38 @@
+/* Bubble Top */
+& {
+	.hacks();
+	position: relative;
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"background-color");
+}
+
+&:before {
+	pointer-events: none;
+	position: absolute;
+	content: '';
+	border-style: solid;
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"transform, border-color, background-color");
+	left: 50%;
+	margin-left:-@tipWidth;
+	top: 0;
+	border-width: 0 @tipWidth @tipHeight @tipWidth;
+	border-color: transparent;
+	opacity:0;
+	z-index: 1;
+}
+
+&:hover,
+&:focus,
+&:active,
+&.current-menu-ancestor,
+&.current-menu-item,
+&.current_page_item {
+	background-color:@activeColor;
+
+	&:before {
+		.prefixed(transform, translateY(-(@tipHeight)));
+		border-color: transparent transparent @activeColor transparent;
+		opacity:1;
+	}
+}

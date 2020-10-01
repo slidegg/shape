@@ -1,0 +1,34 @@
+/* Zoom Fade */
+@duration: @mediumDuration;
+
+.products ul li,
+ul.products li {
+	position:relative;
+	z-index:1;
+}
+
+.products ul li .shopkit-loop-image .shopkit-loop-image-inner,
+ul.products li .shopkit-loop-image .shopkit-loop-image-inner {
+	.prefixed(transition-property, ~"transform, box-shadow");
+	.prefixed(transition-duration, @duration);
+	.prefixed(transition-timing-function, ease-out);
+}
+	.products ul li .shopkit-loop-image:hover .shopkit-loop-image-inner,
+	ul.products li .shopkit-loop-image:hover .shopkit-loop-image-inner {
+		transform:scale(1.15);
+	}
+.products ul li .shopkit-loop-image img,
+ul.products li .shopkit-loop-image img {
+	.prefixed(transition-property, opacity);
+	.prefixed(transition-duration, @duration);
+	.prefixed(transition-timing-function, ease-out);
+}
+	.products ul li .shopkit-loop-image:hover img,
+	ul.products li .shopkit-loop-image:hover img {
+		box-shadow:0 0 15px -3px @shadowColor;
+		opacity:0;
+	}
+	.products ul li .shopkit-loop-image:hover img[src$=".png"],
+	ul.products li .shopkit-loop-image:hover img[src$=".png"] {
+		box-shadow:none;
+	}

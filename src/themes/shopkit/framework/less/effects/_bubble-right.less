@@ -1,0 +1,38 @@
+/* Bubble Right */
+& {
+	.hacks();
+	position: relative;
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"background-color");
+}
+
+&:before {
+	pointer-events: none;
+	position: absolute;
+	content: '';
+	border-style: solid;
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"transform, border-color, background-color");
+	top: 50%;
+	margin-top:-@tipHeight;
+	right: 0;
+	border-width: @tipHeight 0 @tipHeight @tipWidth;
+	border-color: transparent;
+	opacity:0;
+	z-index: 1;
+}
+
+&:hover,
+&:focus,
+&:active,
+&.current-menu-ancestor,
+&.current-menu-item,
+&.current_page_item {
+	background-color:@activeColor;
+
+	&:before {
+		.prefixed(transform, translateX(@tipWidth));
+		border-color: transparent transparent transparent @activeColor;
+		opacity:1;
+	}
+}

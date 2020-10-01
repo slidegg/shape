@@ -1,0 +1,32 @@
+/* Overline From Center */
+@duration: @mediumDuration;
+
+.hacks();
+position: relative;
+
+&:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 50%;
+	right: 50%;
+	top: 0;
+	background: @activeColor;
+	height: 4px;
+	.prefixed(transition-property, "left, right");
+	.prefixed(transition-duration, @duration);
+	.prefixed(transition-timing-function, ease-out);
+}
+
+&:hover,
+&:focus,
+&:active,
+&.current-menu-ancestor,
+&.current-menu-item,
+&.current_page_item {
+
+	&:before {
+		left: 0;
+		right: 0;
+	}
+}

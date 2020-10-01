@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'PT Serif';
+  src: font-url('PTF55F.eot');
+  src: font-url('PTF55F.svg#PTSerifRegular') format('svg'),
+     font-url('PTF55F.eot?#iefix') format('embedded-opentype'),
+     font-url('PTF55F.woff') format('woff'),
+     font-url('PTF55F.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: font-url('PTF56F.eot');
+  src: font-url('PTF56F.svg#PTSerifItalic') format('svg'),
+     font-url('PTF56F.eot?#iefix') format('embedded-opentype'),
+     font-url('PTF56F.woff') format('woff'),
+     font-url('PTF56F.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: font-url('PTF75F.eot');
+  src: font-url('PTF75F.svg#PTSerifBold') format('svg'),
+     font-url('PTF75F.eot?#iefix') format('embedded-opentype'),
+     font-url('PTF75F.woff') format('woff'),
+     font-url('PTF75F.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: font-url('PTF76F.eot');
+  src: font-url('PTF76F.svg#PTSerifBoldItalic') format('svg'),
+     font-url('PTF76F.eot?#iefix') format('embedded-opentype'),
+     font-url('PTF76F.woff') format('woff'),
+     font-url('PTF76F.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: font-url('PTZ55F.eot');
+  src: font-url('PTZ55F.svg#PTSerifCaptionRegular') format('svg'),
+     font-url('PTZ55F.eot?#iefix') format('embedded-opentype'),
+     font-url('PTZ55F.woff') format('woff'),
+     font-url('PTZ55F.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: font-url('PTZ56F.eot');
+  src: font-url('PTZ56F.svg#PTSerifCaptionItalic') format('svg'),
+     font-url('PTZ56F.eot?#iefix') format('embedded-opentype'),
+     font-url('PTZ56F.woff') format('woff'),
+     font-url('PTZ56F.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}

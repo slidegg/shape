@@ -1,0 +1,18 @@
+/* Grow */
+& > a {
+	.hacks();
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"transform, background-color");
+	position:relative;
+}
+
+&:hover > a,
+&:focus > a,
+&:active > a,
+&.current-menu-ancestor > a,
+&.current-menu-item > a,
+&.current_page_item > a {
+	.prefixed(transform, scale(1.1));
+	background-color:@activeColor;
+	z-index:1;
+}

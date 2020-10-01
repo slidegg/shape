@@ -1,0 +1,38 @@
+/* Bubble Float Bottom */
+& {
+	.hacks();
+	position: relative;
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"transform, background-color");
+}
+
+&:before {
+	position: absolute;
+	content: '';
+	left: 50%;
+	margin-left:-@tipWidth;
+	bottom: 0;
+	border-style: solid;
+	border-width: @tipHeight @tipWidth 0 @tipWidth;
+	border-color: transparent;
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"transform, border-color");
+	opacity:0;
+	z-index: 1;
+}
+
+&:hover,
+&:focus,
+&:active,
+&.current-menu-ancestor,
+&.current-menu-item,
+&.current_page_item {
+	.prefixed(transform, translateY(-(@tipHeight)));
+	background-color:@activeColor;
+
+	&:before {
+		.prefixed(transform, translateY(@tipHeight));
+		border-color: @activeColor transparent transparent transparent;
+		opacity:1;
+	}
+}

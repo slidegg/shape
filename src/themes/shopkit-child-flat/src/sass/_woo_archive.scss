@@ -1,0 +1,117 @@
+//.woocommerce.archive {
+//  .page-title {
+//    .search-title {
+//      display: inline-block;
+//      position: relative;
+//      color: inherit;
+//      font-size: 1.6rem;
+//      .search-title-term {
+//        color: $brand-primary;
+//      }
+//      .fa-times {
+//        font-size: 0.85em;
+//        position: relative;
+//        top: -5px;
+//      }
+//      &:hover {
+//        .search-title-term,
+//        .fa-times {
+//          color: #a94442;
+//        }
+//        .fa-times {
+//          text-shadow: 1px 1px 1px #666666;
+//        }
+//      }
+//    }
+//  }
+//  .kallyas-productlist-wrapper:not(.kallyas-wc-cols--3) ul.products li.product:nth-child(2n+1),
+//  .kallyas-productlist-wrapper:not(.kallyas-wc-cols--3) ul.products li.product:nth-child(4n+1),
+//  ul.products li.first {
+//    clear: none !important;
+//  }
+//}
+//
+//@mixin gg7-archive($categories-width, $filters-width) {
+//  body.woocommerce.archive {
+//    #content {
+//      > .container {
+//        > .row {
+//          > aside {
+//            right: percentage(1 - $categories-width - $filters-width);
+//            width: percentage($categories-width);
+//            &.right-sidebar {
+//              width: percentage($filters-width);
+//            }
+//          }
+//          > div {
+//            left: percentage($categories-width);
+//            width: percentage(1 - $categories-width - $filters-width);
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//@media all and (min-width: $screen-md-min) {
+//  body.woocommerce.archive {
+//    #content {
+//      > .container {
+//        @include clearfix();
+//        width: 100%;
+//        max-width: 1920px;
+//        > .row {
+//          @include clearfix();
+//          > aside,
+//          > div {
+//          }
+//          > aside {
+//            float: left;
+//            position: relative;
+//            min-height: 1px;
+//            padding: 0 0 0 15px;
+//            display: block;
+//            box-sizing: border-box;
+//            &.right-sidebar {
+//              right: 0;
+//              padding: 0 15px 0 0;
+//            }
+//          }
+//          > div {
+//            float: left;
+//            position: relative;
+//            min-height: 1px;
+//            padding-left: 15px;
+//            padding-right: 15px;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//@media all and (min-width: $screen-md-min) {
+//  @include gg7-archive(0.25, 0.18);
+//}
+//
+//@media all and (min-width: $screen-xl-min) {
+//  @include gg7-archive(0.20, 0.15);
+//}
+//
+//@media all and (min-width: $screen-xxl-min) {
+//  body.woocommerce {
+//    #content {
+//      .kallyas-wc-cols--4 ul.products li.product {
+//        width: 20%;
+//      }
+//      ul.products li {
+//        &.first {
+//          clear: none;
+//        }
+//        &:nth-child(5n+6) {
+//          clear: both;
+//        }
+//      }
+//    }
+//  }
+//}

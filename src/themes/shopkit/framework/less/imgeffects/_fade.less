@@ -1,0 +1,13 @@
+/* Fade */
+@duration: @mediumDuration;
+
+.products ul li .shopkit-loop-image img,
+ul.products li .shopkit-loop-image img {
+	.prefixed(transition-property, opacity);
+	.prefixed(transition-duration, @duration);
+	.prefixed(transition-timing-function, ease-out);
+}
+	.products ul li .shopkit-loop-image:hover img,
+	ul.products li .shopkit-loop-image:hover img {
+		opacity:0;
+	}

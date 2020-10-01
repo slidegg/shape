@@ -1,0 +1,138 @@
+.woocommerce-page .col2-set .col-1, .woocommerce-page .col2-set .col-2 {
+  float: inherit;
+  width: 100%;
+  margin: auto;
+}
+
+.woocommerce-checkout {
+  background: #f3f3f3;
+  border-radius: 6px;
+  color: #eb1724;
+  font-weight: 700;
+}
+
+.citisaid-send-order {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.citisaid-send-order-text {
+  padding: 10px 15px;
+  margin-top: 25px;
+}
+
+.citisaid-send-order-text p {
+  margin: 0px;
+}
+
+.citisaid-send-order button {
+  padding: 20px 65px !important;
+}
+
+.woocommerce-checkout {
+  color: #535353;
+}
+
+.woocommerce-checkout .checkout-basics {
+  color: #eb1724;
+}
+
+.woocommerce-checkout .checkout-basics * {
+  color: #535353;
+}
+
+.woocommerce-checkout .checkout-basics > label,
+.woocommerce-checkout .checkout-basics p > label {
+  color: #eb1724;
+}
+
+.woocommerce-checkout h3 {
+  color: #eb1724;
+}
+
+.woocommerce ul#shipping_method,
+.woocommerce-checkout #payment,
+.woocommerce-checkout-payment {
+  background: none !important;
+  padding: 10px;
+}
+
+.woocommerce-checkout #payment ul.payment_methods {
+  background: none;
+  padding: 0;
+  border: none;
+}
+
+.woocommerce-checkout #payment .form-row.place-order {
+  display: none;
+}
+
+.wc_payment_method.payment_method_cheque {
+  display: none;
+}
+
+.woocommerce-shipping-methods li:first-child {
+  display: none;
+}
+
+.shipping-description {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em;
+  margin: 1em 0;
+  font-size: .92em;
+  border-radius: 2px;
+  line-height: 1.5;
+  background-color: #dfdcde;
+  color: #515151;
+  font-weight: normal;
+}
+
+.shipping-description:before {
+  content: '';
+  display: block;
+  border: 1em solid transparent;
+  border-bottom-color: #dfdcde;
+  position: absolute;
+  top: -.75em;
+  left: 0;
+  margin: -1em 0 0 2em
+}
+
+#document_type_field span.woocommerce-input-wrapper {
+  display: block;
+  padding: 5px 10px 10px 10px;
+}
+
+h3#ship-to-different-address {
+  padding-left: 20px;
+}
+
+h3#ship-to-different-address label {
+  margin: 0;
+}
+
+h3#ship-to-different-address input {
+  top: 8px;
+}
+
+form.checkout {
+  padding: 1rem;
+}
+
+form.checkout span.optional,
+form.checkout abbr.optional,
+form.checkout span.required,
+form.checkout abbr.required {
+  display: none;
+}
+
+form.checkout .blockOverlay {
+  background-color: #f3f3f3 !important;
+}
+
+.woocommerce-checkout-review-order-table td:last-child {
+  width: 1%;
+  white-space: nowrap;
+}

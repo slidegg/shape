@@ -1,0 +1,92 @@
+//.woocommerce {
+//  ul.products {
+//    padding: 0 7.5px;
+//    li.product {
+//      padding: 0 7.5px;
+//      margin: 0 0 15px 0;
+//      .product-list-item {
+//        position: relative;
+//        padding: 10px;
+//        img {
+//          display: block;
+//        }
+//        &.prod-layout-style2 .kw-details {
+//          padding: 10px 0 8px 0;
+//          overflow: hidden;
+//          h3 {
+//            line-height: 1.2;
+//          }
+//        }
+//        &.prod-layout-style2 .kw-actions {
+//          position: absolute;
+//          bottom: 0;
+//          right: 0;
+//        }
+//        .gg7_stock_status_wrapper {
+//          display: block;
+//          width: 100%;
+//          overflow: hidden;
+//          white-space: nowrap;
+//          text-overflow: ellipsis;
+//          line-height: 1.5em;
+//          padding-bottom: 4px;
+//        }
+//      }
+//      &.onbackorder .svg-addCartIcon {
+//        display: inline;
+//      }
+//    }
+//  }
+//  &.tax-product_cat {
+//    ul.products {
+//      li.product-category {
+//        h2 {
+//          display: none;
+//        }
+//      }
+//    }
+//    &.term-527 {
+//      .woocommerce-products-header .term-description {
+//        display: none;
+//      }
+//      ul.products {
+//        li.product-category {
+//          h2 {
+//            display: flex;
+//            margin: 10px 0 0 0;
+//            font-size: 16px !important;
+//            line-height: 22px;
+//            min-height: 44px !important;
+//            max-height: 44px !important;
+//            height: 44px !important;
+//            text-align: center;
+//            padding-top: 10px;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+
+.woocommerce {
+  ul.products {
+    .shopkit-loop-image {
+      margin-top: 0 !important;
+    }
+
+    .price {
+      display: block !important;
+    }
+
+    li {
+      .button {
+        margin: 15px auto 5px auto;
+        display: block;
+        padding: initial;
+        @media only screen and (max-width: 1500px) {
+          font-size: 12px !important;
+        }
+      }
+    }
+  }
+}

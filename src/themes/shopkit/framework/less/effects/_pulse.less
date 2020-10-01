@@ -1,0 +1,28 @@
+/* Pulse */
+.keyframes(~"@{nameSpace}-pulse", {
+	25% {
+		.prefixed(transform, scale(1.1));
+	}
+
+	75% {
+		.prefixed(transform, scale(.9));
+	}
+});
+
+& > a {
+	.hacks();
+	.prefixed(transition-property, ~"background-color");
+}
+
+&:hover > a,
+&:focus > a,
+&:active > a,
+&.current-menu-ancestor > a,
+&.current-menu-item > a,
+&.current_page_item > a {
+	.prefixed(animation-name, ~"@{nameSpace}-pulse");
+	.prefixed(animation-duration, 1s);
+	.prefixed(animation-timing-function, linear);
+	.prefixed(animation-iteration-count, infinite);
+	background-color:@activeColor;
+}

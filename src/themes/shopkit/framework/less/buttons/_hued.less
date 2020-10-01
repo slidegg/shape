@@ -1,0 +1,51 @@
+@duration: @mediumDuration;
+
+.hacks();
+position: relative;
+cursor: pointer;
+white-space:nowrap;
+display: inline-block;
+overflow: hidden;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+-webkit-tap-highlight-color: transparent;
+vertical-align: middle;
+z-index: 1;
+will-change: ~"color, background-color, box-shadow";
+text-align: center;
+cursor: pointer;
+border: none;
+border-radius:100px;
+display: inline-block;
+outline: 0;
+padding: 0 2rem;
+vertical-align: middle;
+-webkit-tap-highlight-color: transparent;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+color:contrast(@@button_font_color, #222222, #ffffff, 70%);
+background: @@button_font_color;
+background: ~"-moz-linear-gradient(-45deg, "spin(@@button_font_color, -40)~" 0%, "@@button_font_color~" 100%)";
+background: ~"-webkit-linear-gradient(-45deg, "spin(@@button_font_color, -40)~" 0%, "@@button_font_color~" 100%)";
+background: ~"linear-gradient(135deg, "spin(@@button_font_color, -40)~" 0%, "@@button_font_color~" 100%)";
+.prefixed(transition-duration, @mediumDuration);
+.prefixed(transition-property, ~"color, background, box-shadow");
+
+&:hover {
+	color:contrast(@@button_hover_font_color, #222222, #ffffff, 70%);
+	background: @@button_hover_font_color;
+	background: ~"-moz-linear-gradient(-45deg, "spin(@@button_hover_font_color, -40)~" 0%, "@@button_hover_font_color~" 100%)";
+	background: ~"-webkit-linear-gradient(-45deg, "spin(@@button_hover_font_color, -40)~" 0%, "@@button_hover_font_color~" 100%)";
+	background: ~"linear-gradient(135deg, "spin(@@button_hover_font_color, -40)~" 0%, "@@button_hover_font_color~" 100%)";
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16), 0 4px 20px 0 rgba(0, 0, 0, 0.12);
+}
+&.disabled,
+&:disabled {
+	cursor:not-allowed;
+	color:#eee;
+	background: @@button_hover_font_color;
+	background: -moz-linear-gradient(-45deg, #aaa 0%, #888 100%);
+	background: -webkit-linear-gradient(-45deg, #aaa 0%, #888 100%);
+	background: linear-gradient(135deg, #aaa 0%, #888 100%);
+}

@@ -1,0 +1,35 @@
+/* Bounce To Top */
+.hacks();
+position: relative;
+.prefixed(transition-property, color);
+.prefixed(transition-duration, @slowDuration);
+
+& > a:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: @activeColor;
+	.prefixed(transform, scaleY(0));
+	.prefixed(transform-origin, 50% 100%);
+	.prefixed(transition-property, transform);
+	.prefixed(transition-duration, @slowDuration);
+	.prefixed(transition-timing-function, ease-out);
+}
+
+&:hover > a,
+&:focus > a,
+&:active > a,
+&.current-menu-ancestor > a,
+&.current-menu-item > a,
+&.current_page_item > a {
+	color: white;
+
+	&:before {
+		.prefixed(transform, scaleY(1));
+		.prefixed(transition-timing-function, cubic-bezier(.52,1.64,.37,.66));
+	}
+}

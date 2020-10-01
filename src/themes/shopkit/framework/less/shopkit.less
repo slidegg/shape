@@ -1,0 +1,58 @@
+/*------------------------------------------------------------------
+[ShopKit - WCES.LESS]
+
+[Table of contents]
+
+1.Browser Prefixes
+2.Mixed Variables
+3.Fonts
+4.Includes
+5.WooCommerce
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Browser Prefixes]
+-------------------------------------------------------------------*/
+
+@webkit: true;
+@moz: true;
+@ms: true;
+@o: true;
+
+
+/*------------------------------------------------------------------
+[Mixed Variables]
+-------------------------------------------------------------------*/
+
+@fastDuration: .1s;
+@mediumDuration: .2s;
+@slowDuration: .5s;
+@shadowColor: rgba(0, 0, 0, .6);
+@tipWidth: 10px;
+@tipHeight: 10px;
+@spaceBetweenTextAndArrows: 2.2em;
+
+
+/*------------------------------------------------------------------
+[Fonts]
+-------------------------------------------------------------------*/
+
+.create-fonts(@inc_active, @inc_font_names, @inc_font_slugs, @inc_length);
+
+
+/*------------------------------------------------------------------
+[Includes]
+-------------------------------------------------------------------*/
+
+@import "_functions";
+@import "_rtl";
+@import "_styles";
+@import "_gutenberg";
+
+
+/*------------------------------------------------------------------
+[WooCommerce]
+Comment this include if you are not going to use WooCommerce!
+-------------------------------------------------------------------*/
+
+@import "_woocommerce";

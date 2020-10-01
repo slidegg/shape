@@ -1,0 +1,184 @@
+/*
+Theme Name:     Kallyas Child Theme
+Theme URI:      http://kallyas.net/
+Description:    Child theme for the Kallyas theme
+Author:         Hogash
+Author URI:     http://themeforest.net/user/hogash
+Template:       kallyas
+Version:        1.0
+Tags: dark, light, left-sidebar, right-sidebar, fluid-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, full-width-template, theme-options, translation-ready
+Text Domain:  zn_framework
+*/
+/*
+main  - #eb1724
+light - #1192ab
+ */
+.whyitem {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.whysection:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.search-head {
+  min-width: 300px;
+}
+
+.ult_tabmenu {
+  margin: 5px 15px !important;
+}
+
+.probox {
+  border-color: #eb1724 !important;
+}
+
+.probox .promagnifier .innericon svg {
+  fill: #eb1724 !important;
+}
+
+.cards {
+  background-color: white;
+  padding: 7px 5px 10px 5px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.cards img {
+  vertical-align: middle;
+}
+.cards .masterpass {
+  padding-left: 16px;
+  max-height: 22px;
+}
+
+.payment_method_alphabank_gateway img {
+  display: none;
+}
+
+#footer-widget-area-6  .widget_text{
+  width: 83%;
+}
+
+.footer-copy img {
+  vertical-align: middle;
+}
+
+.shopkit-widgets-footer .shopkit-column .textwidget ul {
+  list-style-type: none;
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, .5);
+}
+
+.shopkit-widget-2-columns-2 > div {
+  margin-bottom: 0px !important;
+}
+
+.shopkit-widget-2-columns-2 {
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-width: 1px;
+  border-bottom: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  padding-top: 20px;
+  max-width: 1500px;
+}
+
+.faqimage {
+  margin-bottom: -8px !important;
+}
+
+.woocommerce ul.products li.product h2, .woocommerce ul.products li.product h3 {
+  line-height: 20px;
+  height: 55px;
+  overflow: hidden;
+}
+
+/* Checkbox CSS
+----------------*/
+.return-form input[type="checkbox"] {
+  transform: scale(1.3);
+  margin-left: 5px;
+}
+
+/* Contact Form 7 Form Greg
+-----------------------------------------------*/
+
+#form-wrap > p[name="email"] {
+  margin-bottom: -42px !important;
+}
+
+.sendpress-signup-form input[type=text] {
+  width: 100%;
+  font-size: 12px;
+  line-height: 30px;
+  padding-left: 5px;
+  border-radius: 0;
+}
+
+.sendpress-submit {
+  -webkit-appearance: button;
+  cursor: pointer;
+  padding: 10px 40.3%;
+  margin-bottom: -5px !important;
+  border-width: 0;
+  color: white;
+  background-color: black;
+  width: 85%;
+}
+
+.price {
+  padding-top: 10px !important;
+  color: #eb1724 !important;
+}
+
+@media (min-width: 768px) {
+  .half-part {
+    display: table-cell;
+    width: 915px;
+  }
+}
+
+.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 input[type="tel"], .wpcf7 input[type="number"], .wpcf7 input[type="date"],.wpcf7 textarea, .rma-reason select {
+  width: 90% !important;
+  border-radius: 0 !important;
+  border-style: solid;
+  padding: 5px !important;
+  border-color: #eb17244a;
+  border-width: 1px;
+  box-shadow: 0px 0px 2px 0px #eb1724;
+}
+
+.service-form .wpcf7-form-control-wrap {
+  padding: 0 6px;
+}
+
+.service-form .wpcf7 textarea {
+  width: 100% !important;
+}
+
+.return-form .submit-line {
+  text-align: center;
+}
+
+.return-form .wpcf7 input[type="submit"] {
+  width: 50%;
+  padding: 10px;
+}
+
+.service-form .wpcf7 input[type="submit"] {
+  width: 100%;
+}
+
+.step-title {
+  font-weight: bold;
+  color: #eb1724;
+}
+.shopkit-widget-3-columns-3 div{
+  margin-bottom: 0 !important;
+}

@@ -53,7 +53,7 @@ function css() {
       })
     )
     .pipe(cleanCSS())
-    .pipe(concat("style.css"))
+    .pipe(concat("style.min.css"))
     .pipe(server.stream())
     .pipe(
       dest(

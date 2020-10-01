@@ -1,0 +1,21 @@
+/* Fade */
+@duration: @mediumDuration;
+
+.products ul li .shopkit-loop-image img,
+ul.products li .shopkit-loop-image img {
+	.prefixed(transition-property, opacity);
+	.prefixed(transition-duration, @duration);
+	.prefixed(transition-timing-function, ease-out);
+}
+
+.products ul li,
+ul.products li {
+	.shopkit-loop-image:hover {
+		.shopkit-loop-image-inner {
+			box-shadow: 0 0 15px -3px rgba(0,0,0,0.6);
+		}
+		img {
+			opacity:0;
+		}
+	}
+}

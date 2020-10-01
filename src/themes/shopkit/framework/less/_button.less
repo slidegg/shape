@@ -1,0 +1,49 @@
+@button_style: "@{section}_button_style";
+
+@button_font_color: "@{section}_button_font_color";
+@button_font_family: "@{section}_button_font_family";
+@button_font_size: "@{section}_button_font_size";
+@button_font_style: "@{section}_button_font_style";
+@button_font_variant: "@{section}_button_font_variant";
+@button_font_weight: "@{section}_button_font_weight";
+@button_letter_spacing: "@{section}_button_letter_spacing";
+@button_line_height: "@{section}_button_line_height";
+@button_text_decoration: "@{section}_button_text_decoration";
+@button_text_transform: "@{section}_button_text_transform";
+
+@button_hover_font_color: "@{section}_button_hover_font_color";
+@button_hover_font_family: "@{section}_button_hover_font_family";
+@button_hover_font_size: "@{section}_button_hover_font_size";
+@button_hover_font_style: "@{section}_button_hover_font_style";
+@button_hover_font_variant: "@{section}_button_hover_font_variant";
+@button_hover_font_weight: "@{section}_button_hover_font_weight";
+@button_hover_letter_spacing: "@{section}_button_hover_letter_spacing";
+@button_hover_line_height: "@{section}_button_hover_line_height";
+@button_hover_text_decoration: "@{section}_button_hover_text_decoration";
+@button_hover_text_transform: "@{section}_button_hover_text_transform";
+
+font-family:@@button_font_family;
+font-size:@@button_font_size;
+font-style:@@button_font_style;
+font-variant:@@button_font_variant;
+font-weight:@@button_font_weight;
+letter-spacing:@@button_letter_spacing;
+line-height:@@button_line_height;
+text-decoration:@@button_text_decoration;
+text-transform:@@button_text_transform;
+
+
+&:hover {
+
+	font-family:@@button_hover_font_family;
+	font-size:@@button_hover_font_size;
+	font-style:@@button_hover_font_style;
+	font-variant:@@button_hover_font_variant;
+	font-weight:@@button_hover_font_weight;
+	letter-spacing:@@button_hover_letter_spacing;
+	line-height:@@button_hover_line_height;
+	text-decoration:@@button_hover_text_decoration;
+	text-transform:@@button_hover_text_transform;
+}
+
+.create-buttons(@@button_style);

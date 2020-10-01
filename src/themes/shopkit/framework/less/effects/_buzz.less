@@ -1,0 +1,29 @@
+/* Buzz */
+.keyframes(~"@{nameSpace}-buzz", {
+	50% {
+		.prefixed(transform, translateX(3px) rotate(2deg));
+	}
+
+	100% {
+		.prefixed(transform, translateX(-3px) rotate(-2deg));
+	}
+});
+
+& > a {
+	.hacks();
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"color, background-color");
+}
+
+&:hover > a,
+&:focus > a,
+&:active > a,
+&.current-menu-ancestor > a,
+&.current-menu-item > a,
+&.current_page_item > a {
+	.prefixed(animation-name, ~"@{nameSpace}-buzz");
+	.prefixed(animation-duration, .15s);
+	.prefixed(animation-timing-function, linear);
+	.prefixed(animation-iteration-count, infinite);
+	background-color: @activeColor;
+}

@@ -1,0 +1,16 @@
+/* Box Shadow Outset */
+.hacks();
+.prefixed(transition-duration, @mediumDuration);
+.prefixed(transition-property, ~"box-shadow, background-color");
+position:relative;
+
+&:hover,
+&:focus,
+&:active,
+&.current-menu-ancestor,
+&.current-menu-item,
+&.current_page_item {
+	box-shadow: 2px 2px 2px @shadowColor;
+	background-color:@activeColor;
+	z-index:1;
+}

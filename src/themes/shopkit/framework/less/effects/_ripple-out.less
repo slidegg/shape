@@ -1,0 +1,38 @@
+/* Ripple Out */
+.keyframes(~"@{nameSpace}-ripple-out", {
+	100% {
+		top: -(6px + 6px);
+		right: -(6px + 6px);
+		bottom: -(6px + 6px);
+		left: -(6px + 6px);
+		opacity: 0;
+		border:6px solid @secondaryColor;
+	}
+});
+
+.hacks();
+position: relative;
+
+&:before {
+	content: '';
+	position: absolute;
+	border: 0 solid @secondaryColor;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	.prefixed(animation-duration, 1s);
+	.prefixed(transition-property, border);
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-timing-function, ease-out);
+}
+
+&:hover:before,
+&:focus:before,
+&:active:before,
+&.current-menu-ancestor:before,
+&.current-menu-item:before,
+&.current_page_item:before {
+	.prefixed(animation-name, ~"@{nameSpace}-ripple-out");
+}

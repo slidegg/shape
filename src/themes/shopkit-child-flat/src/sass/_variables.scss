@@ -1,0 +1,15 @@
+$brand-primary: #eb1724 !default;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1140px;
+$screen-xl-min: 1400px;
+$screen-xxl-min: 1600px;
+
+//$primary-original: #76c7d3;
+//$primary: darken($primary-original, 10%); // lighten(#2e3f50, 20%) !default;
+$primary: $brand-primary;
+$inverse: #212529; // #f2f2f2;
+
+$font-size-base: 0.875rem;
+$fa-font-path: "fonts/font-awesome" !default;
+$fa-font-size-base: $font-size-base; // 16px !default;

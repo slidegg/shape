@@ -1,0 +1,125 @@
+#header_section {
+  @media only screen and (min-width: 1121px) {
+    .shopkit-section-left {
+      text-align: left;
+
+      .right {
+        float: right;
+        margin-top: 25px;
+      }
+    } 
+
+
+    .shopkit-section-right {
+      text-transform: uppercase;
+      line-height: 46px;
+      background: #000000;
+      margin: 20px auto 0 auto;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+
+    .header-menu {
+      max-width: 1500px;
+      width: 97%;
+    }
+
+    nav {
+      width: 100%;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+    } 
+
+    nav ul li {
+      list-style: none;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    nav ul li a {
+      display: block;
+    }
+
+    .sub-menu {
+      display: block;
+      width: 100%;
+    }
+  }
+  //mobile
+  @media only screen and (max-width: 1120px) {
+    .shopkit-section-left {
+      margin: 50px 0 15px;
+    }
+    .search-head {
+      width: 95%;
+      margin-bottom: 15px;
+    }
+    .shopkit-section-right {
+      margin-top: 0;
+    }
+  }
+}
+@media only screen and (max-width: 849px) {
+  .shopkit-header {
+    background: #ffff;
+  }
+}
+//fix safari placeholder problem in search
+#ajaxsearchlite1 .probox .proinput input, div.asl_w .probox .proinput input {
+  font-size: initial !important;
+}
+.auth-popup-links {
+  margin-top: 20px;
+  color: #4a4a4a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+//overwrite styles of sidecart plugin and style for new add to cart
+.xoo-wsc-basket {
+  margin-right: 0 !important;
+  right: auto !important;
+  padding: initial !important;
+  box-shadow: none !important;
+  bottom: auto !important;
+  position: initial !important;
+}
+.xoo-wsc-items-count { 
+  position: initial !important;
+}
+.xoo-wsc-modal .variation {
+  margin-bottom: 0 !important;
+}
+.xoo-wsc-modal .xoo-wsc-price {
+  margin-top: 0 !important;
+}
+.xoo-wsc-modal .variation dd p{
+  margin-bottom: 0 !important;
+}
+.added_to_cart, .go_to_chekout {
+  display: none !important;
+}
+
+.xoo-wsc-remove {
+  $remove_icon_size: 16px;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    left: -20px;
+    top: 4px;
+    display: block;
+    width: $remove_icon_size;
+    height: $remove_icon_size;
+    line-height: $remove_icon_size;
+    text-align: center;
+    border-radius: 50%;
+    background: #ccc;
+    content: 'x';
+  }
+}

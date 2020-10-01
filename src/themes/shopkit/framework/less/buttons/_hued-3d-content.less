@@ -1,0 +1,75 @@
+.hacks();
+z-index: 1;
+position: relative;
+display: inline-block;
+background-size: 100%;
+padding: 0 2em 12px;
+border-radius: 100px;
+cursor: pointer;
+transition-timing-function: linear;
+height:@content_button_line_height*1px;
+box-shadow: 0 4px 0 0 rgba(0,0,0,0.2);
+white-space:nowrap;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+will-change: ~"line-height, background";
+text-align: center;
+border: none;
+vertical-align: middle;
+outline: 0;
+-webkit-tap-highlight-color: transparent;
+color:contrast(@content_button_font_color, #222222, #ffffff, 70%);
+background: @content_button_font_color;
+background: ~"-moz-linear-gradient(0, "spin(@content_button_font_color, -40)~" 0%, @{content_button_font_color} 100%)";
+background: ~"-webkit-linear-gradient(bottom, "spin(@content_button_font_color, -40)~" 0%, @{content_button_font_color} 100%)";
+background: ~"linear-gradient(0, "spin(@content_button_font_color, -40)~" 0%, @{content_button_font_color} 100%)";
+.prefixed(transition-timing-function, ~"linear");
+.prefixed(transition-duration, @fastDuration);
+.prefixed(transition-property, ~"line-height, background");
+
+&:hover {
+	line-height: @content_button_line_height+8px;
+	color:contrast(@content_button_hover_font_color, #222222, #ffffff, 70%);
+	background: @content_button_hover_font_color;
+	background: ~"-moz-linear-gradient(0, "spin(@content_button_hover_font_color, -40)~" 0%, @{content_button_hover_font_color} 100%)";
+	background: ~"-webkit-linear-gradient(bottom, "spin(@content_button_hover_font_color, -40)~" 0%, @{content_button_hover_font_color} 100%)";
+	background: ~"linear-gradient(0, "spin(@content_button_hover_font_color, -40)~" 0%, @{content_button_hover_font_color} 100%)";
+}
+
+&:after {
+	content: '';
+	position: absolute;
+	top: -8px;
+	left: 0;
+	bottom: 8px;
+	right: 0;
+	border-radius: 100px;
+	z-index: -1;
+	will-change: ~"transform, background";
+	background: @content_button_font_color;
+	background: ~"-moz-linear-gradient(-90, "spin(@content_button_font_color, -40)~" 0%, @{content_button_font_color} 100%)";
+	background: ~"-webkit-linear-gradient(right, "spin(@content_button_font_color, -40)~" 0%, @{content_button_font_color} 100%)";
+	background: ~"linear-gradient(-90, "spin(@content_button_font_color, -40)~" 0%, @{content_button_font_color} 100%)";
+	.prefixed(transition-timing-function, ~"linear");
+	.prefixed(transition-duration, @fastDuration);
+	.prefixed(transition-property, ~"transform, background");
+}
+&:hover:after {
+	transform: translateY(4px);
+	background: @content_button_hover_font_color;
+	background: ~"-moz-linear-gradient(-90, "spin(@content_button_hover_font_color, -40)~" 0%, @{content_button_hover_font_color} 100%)";
+	background: ~"-webkit-linear-gradient(right, "spin(@content_button_hover_font_color, -40)~" 0%, @{content_button_hover_font_color} 100%)";
+	background: ~"linear-gradient(-90, "spin(@content_button_hover_font_color, -40)~" 0%, @{content_button_hover_font_color} 100%)";
+}
+
+&.disabled,
+&:disabled {
+	cursor:not-allowed;
+	color:#eee;
+	background: #aaa;
+	background: -moz-linear-gradient(-90, #aaa 0%, #888 100%);
+	background: -webkit-linear-gradient(right, #aaa 0%, #888 100%);
+	background: linear-gradient(-90, #aaa 0%, #888 100%);
+}

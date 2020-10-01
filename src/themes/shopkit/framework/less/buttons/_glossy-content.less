@@ -1,0 +1,46 @@
+@duration: @mediumDuration;
+
+.hacks();
+position: relative;
+cursor: pointer;
+white-space:nowrap;
+display: inline-block;
+overflow: hidden;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+-webkit-tap-highlight-color: transparent;
+vertical-align: middle;
+z-index: 1;
+will-change: ~"color, background-color,background-position, box-shadow";
+text-align: center;
+cursor: pointer;
+border: none;
+border-radius: 2px;
+display: inline-block;
+outline: 0;
+padding: 0 2rem;
+vertical-align: middle;
+-webkit-tap-highlight-color: transparent;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+color:contrast(@content_button_font_color, #222222, #ffffff, 70%);
+background-color:@content_button_font_color;
+.prefixed(transition-duration, @mediumDuration);
+.prefixed(transition-property, ~"color, background-color,background-position, box-shadow");
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xml%3Aspace%3D%22preserve%22%20style%3D%22shape-rendering%3AgeometricPrecision%3B%20text-rendering%3AgeometricPrecision%3B%20image-rendering%3AoptimizeQuality%3B%20fill-rule%3Aevenodd%3B%20clip-rule%3Aevenodd%22%20viewBox%3D%220%200%2050%2050%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20preserveAspectRatio%3D%22none%22%3E%3Cpolygon%20fill%3D%22%23000000%22%20fill-opacity%3D%22.05%22%20points%3D%2250%2C0%20-0%2C50%2050%2C50%20%22%2F%3E%3Cpolygon%20fill%3D%22%23ffffff%22%20fill-opacity%3D%22.05%22%20points%3D%22-0%2C50%2050%2C0%20-0%2C0%20%22%2F%3E%3C%2Fsvg%3E");
+background-position:60% 60%;
+background-size:250% 100%;
+
+&:hover {
+	color:contrast(@content_button_hover_font_color, #222222, #ffffff, 70%);
+	background-color:@content_button_hover_font_color;
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16), 0 4px 20px 0 rgba(0, 0, 0, 0.12);
+	background-position:40% 40%;
+}
+&.disabled,
+&:disabled {
+	cursor:not-allowed;
+	color:#fff;
+	background-color:#eee;
+}

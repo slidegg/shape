@@ -1,0 +1,42 @@
+@wc_cart_basic: contrast(@content_button_font_color, @content_font_color, #ffffff, 70%);
+@wc_cart_color: replace( ~"@{wc_cart_basic}", '#', '%23');
+@wc_cart_contrast: replace( "url('data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20viewBox%3D%270%200%20256%20256%27%20enable-background%3D%27new%200%200%20256%20256%27%20xml%3Aspace%3D%27preserve%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20fill%3D%27!!!!!!%27%20d%3D%27M219%2069l-32%206c-2%2C1%20-4%2C3%20-4%2C5l0%2021%20-121%200c-2%2C0%20-3%2C2%20-4%2C3%20-1%2C2%20-1%2C4%200%2C6l29%2042c1%2C1%202%2C2%204%2C2l86%200%200%2012%20-73%200c0%2C0%200%2C0%200%2C0%200%2C0%200%2C0%20-1%2C0%20-9%2C0%20-16%2C7%20-16%2C17%200%2C9%207%2C17%2016%2C17%2010%2C0%2017%2C-8%2017%2C-17%200%2C-2%200%2C-5%20-1%2C-7l43%200c-1%2C2%20-1%2C5%20-1%2C7%200%2C9%207%2C17%2016%2C17%2010%2C0%2017%2C-8%2017%2C-17%200%2C-6%20-3%2C-11%20-7%2C-14l0%20-15%201%200c3%2C0%205%2C-2%205%2C-5l0%20-42c0%2C0%200%2C-1%200%2C-1%200%2C0%200%2C0%200%2C0l0%20-21%2028%20-6c2%2C0%204%2C-3%204%2C-6%20-1%2C-3%20-4%2C-5%20-6%2C-4l0%200zm-116%20121c-3%2C0%20-6%2C-3%20-6%2C-7%200%2C-4%203%2C-7%206%2C-7%204%2C0%207%2C3%207%2C7%200%2C4%20-3%2C7%20-7%2C7zm74%200c-3%2C0%20-6%2C-3%20-6%2C-7%200%2C-4%203%2C-7%206%2C-7%204%2C0%207%2C3%207%2C7%200%2C4%20-3%2C7%20-7%2C7zm-105%20-78l111%200%200%2032%20-89%200%20-22%20-32z%27%2F%3E%3C%2Fsvg%3E')", '!!!!!!', ~"@{wc_cart_color}" );
+
+.added_to_cart:after {
+	background-image:~"@{wc_cart_contrast}";
+}
+
+@wc_cart_basic_hover: contrast(@content_button_hover_font_color, @content_font_color, #ffffff, 70%);
+@wc_cart_color_hover: replace( ~"@{wc_cart_basic_hover}", '#', '%23');
+@wc_cart_contrast_hover: replace( "url('data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20viewBox%3D%270%200%20256%20256%27%20enable-background%3D%27new%200%200%20256%20256%27%20xml%3Aspace%3D%27preserve%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20fill%3D%27!!!!!!%27%20d%3D%27M219%2069l-32%206c-2%2C1%20-4%2C3%20-4%2C5l0%2021%20-121%200c-2%2C0%20-3%2C2%20-4%2C3%20-1%2C2%20-1%2C4%200%2C6l29%2042c1%2C1%202%2C2%204%2C2l86%200%200%2012%20-73%200c0%2C0%200%2C0%200%2C0%200%2C0%200%2C0%20-1%2C0%20-9%2C0%20-16%2C7%20-16%2C17%200%2C9%207%2C17%2016%2C17%2010%2C0%2017%2C-8%2017%2C-17%200%2C-2%200%2C-5%20-1%2C-7l43%200c-1%2C2%20-1%2C5%20-1%2C7%200%2C9%207%2C17%2016%2C17%2010%2C0%2017%2C-8%2017%2C-17%200%2C-6%20-3%2C-11%20-7%2C-14l0%20-15%201%200c3%2C0%205%2C-2%205%2C-5l0%20-42c0%2C0%200%2C-1%200%2C-1%200%2C0%200%2C0%200%2C0l0%20-21%2028%20-6c2%2C0%204%2C-3%204%2C-6%20-1%2C-3%20-4%2C-5%20-6%2C-4l0%200zm-116%20121c-3%2C0%20-6%2C-3%20-6%2C-7%200%2C-4%203%2C-7%206%2C-7%204%2C0%207%2C3%207%2C7%200%2C4%20-3%2C7%20-7%2C7zm74%200c-3%2C0%20-6%2C-3%20-6%2C-7%200%2C-4%203%2C-7%206%2C-7%204%2C0%207%2C3%207%2C7%200%2C4%20-3%2C7%20-7%2C7zm-105%20-78l111%200%200%2032%20-89%200%20-22%20-32z%27%2F%3E%3C%2Fsvg%3E')", '!!!!!!', ~"@{wc_cart_color_hover}" );
+
+.added_to_cart:hover:after {
+	background-image:~"@{wc_cart_contrast_hover}";
+}
+
+@wc_checkout_basic: contrast(@content_button_font_color, @content_font_color, #ffffff, 70%);
+@wc_checkout_color: replace( ~"@{wc_checkout_basic}", '#', '%23');
+@wc_checkout_contrast: replace( "url('data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20viewBox%3D%270%200%20256%20256%27%20enable-background%3D%27new%200%200%20256%20256%27%20xml%3Aspace%3D%27preserve%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20fill%3D%27!!!!!!%27%20d%3D%27M36%2087l114%200c3%2C0%205%2C3%205%2C6l0%2074c0%2C3%20-2%2C5%20-5%2C5l-114%200c-3%2C0%20-5%2C-2%20-5%2C-5l0%20-74c0%2C-3%202%2C-6%205%2C-6zm134%2047c-1%2C-1%20-2%2C-3%20-2%2C-4%200%2C-2%201%2C-3%202%2C-4%201%2C-1%202%2C-2%204%2C-2l37%200%20-20%20-21c-1%2C-1%20-2%2C-3%20-2%2C-4%200%2C-1%201%2C-3%202%2C-4%201%2C-1%202%2C-1%204%2C-1%201%2C0%203%2C0%204%2C1l29%2031c0%2C0%201%2C0%201%2C1%200%2C0%200%2C0%200%2C1%200%2C0%201%2C0%201%2C1%200%2C0%200%2C0%200%2C1%200%2C0%200%2C0%200%2C1%200%2C0%20-1%2C0%20-1%2C1%200%2C0%200%2C0%200%2C1%200%2C0%20-1%2C0%20-1%2C0%20-8%2C10%20-22%2C21%20-29%2C31%20-1%2C1%20-3%2C2%20-4%2C2%20-2%2C0%20-3%2C-1%20-4%2C-2%20-1%2C-1%20-2%2C-2%20-2%2C-4%200%2C-1%201%2C-3%202%2C-4%204%2C-6%2015%2C-15%2020%2C-21l-37%200c-2%2C0%20-3%2C-1%20-4%2C-1zm-129%20-22l104%200%200%20-14%20-104%200%200%2014zm104%2018l-104%200%200%2032%20104%200%200%20-32z%27%2F%3E%3C%2Fsvg%3E')", '!!!!!!', ~"@{wc_checkout_color}" );
+
+.go_to_chekout:after {
+	background-image:~"@{wc_checkout_contrast}";
+}
+
+@wc_checkout_basic_hover: contrast(@content_button_hover_font_color, @content_font_color, #ffffff, 70%);
+@wc_checkout_color_hover: replace( ~"@{wc_checkout_basic_hover}", '#', '%23');
+@wc_checkout_contrast_hover: replace( "url('data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20x%3D%270px%27%20y%3D%270px%27%20viewBox%3D%270%200%20256%20256%27%20enable-background%3D%27new%200%200%20256%20256%27%20xml%3Aspace%3D%27preserve%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20fill%3D%27!!!!!!%27%20d%3D%27M36%2087l114%200c3%2C0%205%2C3%205%2C6l0%2074c0%2C3%20-2%2C5%20-5%2C5l-114%200c-3%2C0%20-5%2C-2%20-5%2C-5l0%20-74c0%2C-3%202%2C-6%205%2C-6zm134%2047c-1%2C-1%20-2%2C-3%20-2%2C-4%200%2C-2%201%2C-3%202%2C-4%201%2C-1%202%2C-2%204%2C-2l37%200%20-20%20-21c-1%2C-1%20-2%2C-3%20-2%2C-4%200%2C-1%201%2C-3%202%2C-4%201%2C-1%202%2C-1%204%2C-1%201%2C0%203%2C0%204%2C1l29%2031c0%2C0%201%2C0%201%2C1%200%2C0%200%2C0%200%2C1%200%2C0%201%2C0%201%2C1%200%2C0%200%2C0%200%2C1%200%2C0%200%2C0%200%2C1%200%2C0%20-1%2C0%20-1%2C1%200%2C0%200%2C0%200%2C1%200%2C0%20-1%2C0%20-1%2C0%20-8%2C10%20-22%2C21%20-29%2C31%20-1%2C1%20-3%2C2%20-4%2C2%20-2%2C0%20-3%2C-1%20-4%2C-2%20-1%2C-1%20-2%2C-2%20-2%2C-4%200%2C-1%201%2C-3%202%2C-4%204%2C-6%2015%2C-15%2020%2C-21l-37%200c-2%2C0%20-3%2C-1%20-4%2C-1zm-129%20-22l104%200%200%20-14%20-104%200%200%2014zm104%2018l-104%200%200%2032%20104%200%200%20-32z%27%2F%3E%3C%2Fsvg%3E')", '!!!!!!', ~"@{wc_checkout_color_hover}" );
+
+.go_to_chekout:hover:after {
+	background-image:~"@{wc_checkout_contrast_hover}";
+}
+
+input.button[type="button"],
+input.button[type="submit"],
+input.button[type="reset"] {
+	padding-bottom:0;
+}
+input.button[type="button"]:hover,
+input.button[type="submit"]:hover,
+input.button[type="reset"]:hover {
+	line-height: @content_button_line_height*1px;
+}

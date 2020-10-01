@@ -1,0 +1,73 @@
+//
+//// active cat styles
+////
+//.woocommerce.widget_product_categories {
+//  .cat-item {
+//    position: relative;
+//    margin: 0;
+//    padding: 0 0 0 12px;
+//    line-height: 2em;
+//
+//    a {
+//      padding: 0;
+//
+//      &:before {
+//        margin: 0;
+//        display: block;
+//        position: absolute;
+//        left: 0;
+//        width: 8px;
+//        text-align: center;
+//        top: 0;
+//        height: 2em;
+//        line-height: 1.9em;
+//        font-size: 1em;
+//        content: '•';
+//        background: none !important;
+//      }
+//    }
+//
+//    &.cat-parent > a:before {
+//      content: '+';
+//    }
+//  }
+//
+//  .children {
+//    padding-left: 0;
+//  }
+//
+//  .cat-parent,
+//  .cat-item {
+//    display: none;
+//  }
+//
+//  .product-categories > .cat-item {
+//    display: list-item;
+//  }
+//
+//  //
+//  // active cat styles
+//  //
+//  .cat-item.cat-parent {
+//    &.current-cat-parent > a:before,
+//    &.current-cat > a:before {
+//      content: '-';
+//    }
+//  }
+//
+//  .current-cat-parent > .children {
+//    display: block;
+//  }
+//
+//  .current-cat-parent,
+//  .current-cat-parent .cat-parent,
+//  .current-cat-parent > .cat-item,
+//  .current-cat-parent > .children > .cat-item,
+//  .current-cat,
+//  .current-cat .cat-parent,
+//  .current-cat > .cat-item,
+//  .current-cat > .children > .cat-item {
+//    display: list-item;
+//  }
+//}
+//

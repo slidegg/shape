@@ -1,0 +1,41 @@
+/* Bob */
+.keyframes(~"@{nameSpace}-bob", {
+	0% {
+		.prefixed(transform, translateY(-8px));
+	}
+	50% {
+		.prefixed(transform, translateY(-4px));
+	}
+	100% {
+		.prefixed(transform, translateY(-8px));
+	}
+});
+
+.keyframes(~"@{nameSpace}-bob-float", {
+	100% {
+		.prefixed(transform, translateY(-8px));
+	}
+});
+
+& > a {
+	.hacks();
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"background-color");
+}
+
+
+&:hover > a,
+&:focus > a,
+&:active > a,
+&.current-menu-ancestor > a,
+&.current-menu-item > a,
+&.current_page_item > a {
+	.prefixed(animation-name, ~"@{nameSpace}-bob-float, @{nameSpace}-bob");
+	.prefixed(animation-duration, ~".3s, 1.5s");
+	.prefixed(animation-delay, ~"0s, .3s");
+	.prefixed(animation-timing-function, ~"ease-out, ease-in-out");
+	.prefixed(animation-iteration-count, ~"1, infinite");
+	.prefixed(animation-fill-mode, ~"forwards");
+	.prefixed(animation-direction, ~"normal, alternate");
+	background-color: @activeColor;
+}

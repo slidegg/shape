@@ -1,0 +1,15 @@
+.woocommerce {
+  .cart-collaterals {
+    display: none !important;
+  }
+
+  dl.variation {
+    dt {
+      font-weight: bold !important;
+    }
+
+    dd {
+      font-weight: normal !important;
+    }
+  }
+}

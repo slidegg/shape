@@ -1,0 +1,25 @@
+/* Pop */
+.keyframes(~"@{nameSpace}-pop", {
+	50% {
+		.prefixed(transform, scale(1.2));
+	}
+});
+
+& > a {
+	.hacks();
+	.prefixed(transition-property, ~"background-color");
+	.prefixed(transition-duration, @mediumDuration);
+}
+
+&:hover > a,
+&:focus > a,
+&:active > a,
+&.current-menu-ancestor > a,
+&.current-menu-item > a,
+&.current_page_item > a {
+	.prefixed(animation-name, ~"@{nameSpace}-pop");
+	.prefixed(animation-duration, @mediumDuration);
+	.prefixed(animation-timing-function, linear);
+	.prefixed(animation-iteration-count, 1);
+	background-color:@activeColor;
+}

@@ -1,0 +1,16 @@
+/* Rotate */
+& > a {
+	.hacks();
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"transform, background-color");
+}
+
+&:hover > a,
+&:focus > a,
+&:active > a,
+&.current-menu-ancestor > a,
+&.current-menu-item > a,
+&.current_page_item > a {
+	.prefixed(transform, rotate(4deg));
+	background-color:@activeColor;
+}

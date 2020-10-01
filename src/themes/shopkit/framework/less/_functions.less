@@ -1,0 +1,1010 @@
+/*------------------------------------------------------------------
+[ShopKit - _FUNCTIONS.LESS]
+
+[Table of contents]
+
+1.Variables
+2.Helpers
+3.Functions
+4.Headings
+5.Sidebars
+6.Menus
+7.Element Bars
+8.Widget Sections
+9.Content,Text,HTML Sections
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+[Variables]
+-------------------------------------------------------------------*/
+
+@wrapper: @inner_wrapper_width - @columns_margin*2;
+@columns_ratio: ( @wrapper - @sidebars_width_high )/@wrapper;
+@columns_margin_percent: @columns_margin*100/@wrapper*1%;
+
+@wc_wrapper: @inner_wrapper_width - @wc_columns_margin*2;
+@wc_columns_ratio: ( @wrapper - @sidebars_width_high )/@wc_wrapper;
+@wc_columns_margin_percent: @wc_columns_margin*100/@wc_wrapper*1%;
+
+@rows_margin_2: @rows_margin*.5px;
+@columns_margin_2: @columns_margin*.5px;
+
+/*------------------------------------------------------------------
+[Helpers]
+-------------------------------------------------------------------*/
+
+.prefixed(@property, @value) {
+	& when (@webkit = true) {
+		-webkit-@{property}: @value;
+	}
+
+	& when (@moz = true) {
+		-moz-@{property}: @value;
+	}
+
+	& when (@ms = true) {
+		-ms-@{property}: @value;
+	}
+
+	& when (@o = true) {
+		-o-@{property}: @value;
+	}
+
+	@{property}: @value;
+}
+
+
+.keyframes(@name; @content) {
+	& when (@webkit = true) {
+		@-webkit-keyframes @name {
+			@content();
+		}
+	}
+
+	& when (@moz = true) {
+		@-moz-keyframes @name {
+			@content();
+		}
+	}
+
+	& when (@ms = true) {
+		@-ms-keyframes @name {
+			@content();
+		}
+	}
+
+	& when (@o = true) {
+		@-o-keyframes @name {
+			@content();
+		}
+	}
+
+	@keyframes @name {
+		@content();
+	}
+}
+
+.hardwareAccel() {
+	.prefixed(transform, translateZ(0));
+}
+
+.improveAntiAlias() {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.fontSmooth() {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.forceBlockLevel() {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.hacks() {
+	.forceBlockLevel();
+	.hardwareAccel();
+	.improveAntiAlias();
+	.fontSmooth();
+}
+
+
+/*------------------------------------------------------------------
+[Functions]
+-------------------------------------------------------------------*/
+
+.if (@condition, @property, @value) when ( @condition = true ) {
+	@{property}:@value;
+}
+
+.create-background(@show, ...) when (@show = no) {
+
+}
+
+.create-background(@show, @background_image, @background_repeat, @background_attachment, @background_position, @background_size) when (@show = yes) {
+	background-image:url(@background_image);
+	background-repeat:@background_repeat;
+	background-attachment:@background_attachment;
+	background-position:@background_position;
+	background-size:@background_size;
+}
+
+.create-fonts(@curr, ... ) when (@curr = false) {
+
+}
+
+.create-fonts(@curr, @names, @slugs, @index) when (@curr = true) and (@index > 0) {
+
+	.create-fonts(@names, @slugs, (@index - 1));
+
+	@name  : extract(@names, @index);
+	@slug : extract(@slugs, @index);
+
+	@import "@{url}library/fonts/@{slug}/style.css";
+
+}
+
+.create-css-menu(@show, ...) when (@show = false) {
+
+}
+.create-css-menu(@show, ...) when (@show = true) {
+	@css_menu();
+}
+
+.create-css(@show, ...) when (@show = false) {
+
+}
+.create-css(@show, ...) when (@show = true) {
+	@custom_css();
+}
+
+.create-css-tablet(@show, ...) when (@show = false) {
+
+}
+.create-css-tablet(@show, ...) when (@show = true) {
+	@responsive_tablet_css();
+}
+
+.create-css-mobile(@show, ...) when (@show = false) {
+
+}
+.create-css-mobile(@show, ...) when (@show = true) {
+	@responsive_mobile_css();
+}
+
+.create-forms (@line_height, @font_color, @link_color, @background_color) {
+
+}
+
+
+/*------------------------------------------------------------------
+[Headings]
+-------------------------------------------------------------------*/
+
+.create-heading(@section, @h) {
+	@{h} {
+		@font_color: "@{section}_@{h}_font_color";
+		@font_family: "@{section}_@{h}_font_family";
+		@font_size: "@{section}_@{h}_font_size";
+		@font_style: "@{section}_@{h}_font_style";
+		@font_variant: "@{section}_@{h}_font_variant";
+		@font_weight: "@{section}_@{h}_font_weight";
+		@letter_spacing: "@{section}_@{h}_letter_spacing";
+		@line_height: "@{section}_@{h}_line_height";
+		@text_decoration: "@{section}_@{h}_text_decoration";
+		@text_transform: "@{section}_@{h}_text_transform";
+
+		color:@@font_color;
+		font-family:@@font_family;
+		font-size:@@font_size;
+		font-style:@@font_style;
+		font-variant:@@font_variant;
+		font-weight:@@font_weight;
+		letter-spacing:@@letter_spacing;
+		line-height:@@line_height;
+		text-decoration:@@text_decoration;
+		text-transform:@@text_transform;
+		.create-heading-margin(@@line_height, @h);
+	}
+}
+
+.create-heading-margin(@line_height, @type) when (isnumber(@line_height)) and (@type=h1) {
+	margin-bottom:@line_height*1px;
+}
+.create-heading-margin(@line_height, @type) when (isnumber(@line_height)) and (@type=h2) {
+	margin-bottom:@line_height*.66px;
+}
+.create-heading-margin(@line_height, @type) when (isnumber(@line_height)) and (@type=h3) {
+	margin-bottom:@line_height*.5px;
+}
+.create-heading-margin(@line_height, @type) when (isnumber(@line_height)) and (@type=h4) {
+	margin-bottom:@line_height*.5px;
+}
+.create-heading-margin(@line_height, @type) when (isnumber(@line_height)) and (@type=h5) {
+	margin-bottom:@line_height*.25px;
+}
+.create-heading-margin(@line_height, @type) when (isnumber(@line_height)) and (@type=h6) {
+	margin-bottom:0;
+}
+
+
+/*------------------------------------------------------------------
+[Sidebars]
+-------------------------------------------------------------------*/
+
+.create-sections-sidebar-layout(@section_names, @section_slugs, @curr) when (@curr > 0) {
+
+	.create-sections-sidebar-layout(@section_names; @section_slugs; (@curr - 1));
+
+	@section_name : extract(@section_names, @curr);
+	@section_slug : extract(@section_slugs, @curr);
+
+	.create-section-sidebar-layout(@section_name, @section_slug);
+
+}
+
+.create-section-sidebar-layout(@section, @name) {
+
+	@left_sidebar_1: "@{section}_left_sidebar_1";
+	@left_sidebar_2: "@{section}_left_sidebar_2";
+	@right_sidebar_1: "@{section}_right_sidebar_1";
+	@right_sidebar_2: "@{section}_right_sidebar_2";
+	@left_sidebar_width_1_high: "@{section}_left_sidebar_width_1_high";
+	@left_sidebar_width_2_high: "@{section}_left_sidebar_width_2_high";
+	@right_sidebar_width_1_high: "@{section}_right_sidebar_width_1_high";
+	@right_sidebar_width_2_high: "@{section}_right_sidebar_width_2_high";
+	@right_sidebar_width_2_high: "@{section}_right_sidebar_width_2_high";
+
+	@sidebars_width_medium: "@{section}_width_medium";
+	@sidebars_width_high: "@{section}_width_high";
+
+	@ratio: ( @wrapper - @@sidebars_width_high )/@wrapper;
+
+	.shopkit-cl-@{name} {
+
+		.create-sidebar-width(@@left_sidebar_1, shopkit-sidebar-1, @@left_sidebar_width_1_high, @columns_margin, @ratio);
+		.create-sidebar-width(@@left_sidebar_2, shopkit-sidebar-2, @@left_sidebar_width_2_high, @columns_margin, @ratio);
+		.create-sidebar-width(@@right_sidebar_1, shopkit-sidebar-3, @@right_sidebar_width_1_high, @columns_margin,@ratio);
+		.create-sidebar-width(@@right_sidebar_2, shopkit-sidebar-4, @@right_sidebar_width_2_high, @columns_margin, @ratio);
+
+		.shopkit-sidebar-1,
+		.shopkit-sidebar-2 {
+			margin-right:@columns_margin_percent*@ratio;
+		}
+
+		.shopkit-sidebar-3,
+		.shopkit-sidebar-4 {
+			margin-left:@columns_margin_percent*@ratio;
+		}
+
+		.shopkit-main {
+			@sidebars_width_percent: @@sidebars_width_high*100/@wrapper*1%;
+
+			.shopkit-content {
+				width:99.99% - @sidebars_width_percent;
+			}
+
+		}
+
+	}
+
+	@media (max-width: ~"@{responsive_tablet_mode}px") {
+
+		.shopkit-cl-@{name} {
+
+			@sidebars_width_percent: @@sidebars_width_medium*100/@wrapper*1%;
+
+			.shopkit-main {
+				.shopkit-content {
+					width:99.99% - @sidebars_width_percent;
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.create-sidebar-width(@show, ...) when (@show = off) {
+
+}
+
+.create-sidebar-width(@show, @name, @width, @column_padding, @ratio) when (@show = on) {
+
+	@sidebar_width: (@width*100/@wrapper*1%) - @columns_margin_percent*@ratio;
+
+	.@{name} {
+		width:@sidebar_width;
+	}
+
+}
+
+
+/*------------------------------------------------------------------
+[Menus]
+-------------------------------------------------------------------*/
+
+.create-menus(@curr, ... ) when (@curr = false) {
+
+}
+
+.create-menus(@curr, @names, @modes, @index, @curr_menu_font_colors, @curr_menu_font_hovers, @curr_menu_background_actives, @curr_submenu_font_colors, @curr_submenu_font_hovers, @curr_submenu_background_actives, @curr_submenu_backgrounds) when (@index > 0) {
+
+	@name  : extract(@names, @index);
+	@mode : extract(@modes, @index);
+
+	@curr_font_color : extract(@curr_menu_font_colors, @index);
+	@curr_font_hover : extract(@curr_menu_font_hovers, @index);
+	@curr_background_active : extract(@curr_menu_background_actives, @index);
+	@curr_submenu_font_color : extract(@curr_submenu_font_colors, @index);
+	@curr_submenu_font_hover : extract(@curr_submenu_font_hovers, @index);
+	@curr_submenu_background_active : extract(@curr_submenu_background_actives, @index);
+	@curr_submenu_background : extract(@curr_submenu_backgrounds, @index);
+
+	@activeColor: @curr_background_active;
+	@shadowColor: rgba(0, 0, 0, .6);
+
+
+	#menu-@{name} a {color:@curr_font_color;}
+
+	#menu-@{name} > li:hover > a {color:@curr_font_hover;}
+	#menu-@{name} > li.current-menu-ancestor > a {color:@curr_font_hover;}
+	#menu-@{name} > li.current-menu-item > a {color:@curr_font_hover;}
+	#menu-@{name} > li.current_page_item > a {color:@curr_font_hover;}
+
+	#menu-@{name} ul {background-color:@curr_submenu_background;}
+
+	#menu-@{name} ul a {color:@curr_submenu_font_color;}
+
+	#menu-@{name} ul li > a:hover {color:@curr_submenu_font_hover;background-color:@curr_submenu_background_active;}
+
+	#menu-@{name} ul li.current-menu-ancestor > a {color:@curr_submenu_font_hover;background-color:@curr_submenu_background_active;}
+	#menu-@{name} ul li.current-menu-item > a {color:@curr_submenu_font_hover;background-color:@curr_submenu_background_active;}
+	#menu-@{name} ul li.current_page_item > a {color:@curr_submenu_font_hover;background-color:@curr_submenu_background_active;}
+
+	#menu-@{name} li.shopkit-menu-style-multi-column li.current-menu-ancestor > a {
+		background-color: transparent;
+		color:@curr_font_color;
+		color:@curr_submenu_font_color;
+	}
+
+	#menu-@{name} li.shopkit-menu-style-multi-column li.current-menu-ancestor > a:hover {
+		color:@curr_submenu_font_hover;
+	}
+
+	.shopkit-menu-separator #menu-@{name} > li {
+		border-left: 1px solid fade(@curr_font_color, 33%);
+	}
+	#menu-@{name} ul a:hover {background-color:@curr_submenu_background_active;}
+
+	#menu-@{name} li.shopkit-menu-style-multi-column ul li a:hover {
+		background-color:@curr_submenu_background_active !important;
+	}
+
+	#menu-@{name} > li {
+		@import (multiple) "effects/_@{mode}";
+	}
+	#menu-@{name} li.shopkit-menu-style-multi-column > ul > li > span {
+		color:@curr_submenu_background_active;
+	}
+
+	.create-menus(true, @names, @modes, (@index - 1), @curr_menu_font_colors, @curr_menu_font_hovers, @curr_menu_background_actives, @curr_submenu_font_colors, @curr_submenu_font_hovers, @curr_submenu_background_actives, @curr_submenu_backgrounds);
+
+}
+
+.create-buttons(@mode) {
+	@import (multiple) "buttons/_@{mode}";
+}
+
+.create-widget-custom-margins(@show...) when (@show = off){
+
+}
+
+.create-widget-custom-margins(@show; @curr_columns_margin; @curr_rows_margin; @name) when (@show = on){
+
+	@curr_columns_margin_percent: @curr_columns_margin*100/@wrapper*1%;
+
+	.shopkit-widgets-@{name} {
+
+		.shopkit-columns {
+			margin-right:-@curr_columns_margin_percent;
+			.shopkit-column {
+				margin-left:@curr_columns_margin_percent;
+				margin-bottom:~'@{curr_rows_margin}px';
+			}
+		}
+
+		.shopkit-columns.shopkit-widget-1-columns-1 .shopkit-column {
+			width:100% - @curr_columns_margin_percent;
+		}
+		.shopkit-columns.shopkit-widget-2-columns-2 .shopkit-column {
+			width:50% - @curr_columns_margin_percent;
+		}
+		.shopkit-columns.shopkit-widget-3-columns-3 .shopkit-column {
+			width:33.33% - @curr_columns_margin_percent;
+		}
+		.shopkit-columns.shopkit-widget-4-columns-4 .shopkit-column {
+			width:25% - @curr_columns_margin_percent;
+		}
+		.shopkit-columns.shopkit-widget-5-columns-4 {
+			.shopkit-widget-column-1 {
+				width:33.33% - @curr_columns_margin_percent;
+			}
+			.shopkit-widget-column-2,
+			.shopkit-widget-column-3,
+			.shopkit-widget-column-4 {
+				width:22.22% - @curr_columns_margin_percent;
+			}
+		}
+		.shopkit-columns.shopkit-widget-6-columns-4 {
+			.shopkit-widget-column-1,
+			.shopkit-widget-column-2,
+			.shopkit-widget-column-3 {
+				width:22.22% - @curr_columns_margin_percent;
+			}
+			.shopkit-widget-column-4 {
+				width:33.33% - @curr_columns_margin_percent;
+			}
+		}
+		.shopkit-columns.shopkit-widget-7-columns-3 {
+			.shopkit-widget-column-1 {
+				width:50% - @curr_columns_margin_percent;
+			}
+			.shopkit-widget-column-2,
+			.shopkit-widget-column-3 {
+				width:25% - @curr_columns_margin_percent;
+			}
+		}
+		.shopkit-columns.shopkit-widget-8-columns-3 {
+			.shopkit-widget-column-1,
+			.shopkit-widget-column-2 {
+				width:25% - @curr_columns_margin_percent;
+			}
+			.shopkit-widget-column-3 {
+				width:50% - @curr_columns_margin_percent;
+			}
+		}
+
+	}
+
+	@media (max-width: ~"@{responsive_tablet_mode}px") {
+		.shopkit-widgets-@{name} {
+
+			.shopkit-columns.shopkit-widget-3-columns-3 .shopkit-column,
+			.shopkit-columns.shopkit-widget-4-columns-4 .shopkit-column,
+			.shopkit-columns.shopkit-widget-5-columns-4 .shopkit-column,
+			.shopkit-columns.shopkit-widget-6-columns-4 .shopkit-column {
+				width:50% - @curr_columns_margin_percent!important;
+			}
+
+			.shopkit-columns.shopkit-widget-7-columns-3 {
+				.shopkit-widget-column-2,
+				.shopkit-widget-column-3 {
+					width:50% - @curr_columns_margin_percent!important;
+				}
+			}
+			.shopkit-columns.shopkit-widget-8-columns-3 {
+				.shopkit-widget-column-1,
+				.shopkit-widget-column-2 {
+					width:50% - @curr_columns_margin_percent!important;
+				}
+				.shopkit-widget-column-3 {
+					width:100% - @curr_columns_margin_percent!important;
+				}
+			}
+
+		}
+	}
+
+}
+
+.create-shadow(@show...) when (@show = false){
+
+}
+
+.create-shadow(@show; @shadow) when not (@show = false){
+	box-shadow:@shadow;
+}
+
+
+.create-shadow-area(@show; @shadow) when (@show = false){
+
+	@boxshadow: "@{shadow}";
+
+	box-shadow:@@boxshadow;
+}
+
+.create-heights(@i) when (@i > 0) {
+
+	@curr : @i*6;
+	.shopkit-layout-element-separator.shopkit-height-@{curr},
+	img.shopkit-height-@{curr},
+	.shopkit-height-@{curr} img,
+	.shopkit-height-@{curr} svg {
+		height:@i*6px;
+	}
+	.shopkit-height-@{curr} img.shopkit-svg,
+	.shopkit-height-@{curr} svg {
+		width:@i*6px;
+	}
+	.create-heights(@i - 1);
+}
+
+
+/*------------------------------------------------------------------
+[Element Bars]
+-------------------------------------------------------------------*/
+
+
+.create-sections-elements-bar(@section_names, @section_slugs, @curr) when (@curr > 0) {
+
+	.create-sections-elements-bar(@section_names; @section_slugs; (@curr - 1));
+
+	@section_name  : extract(@section_names, @curr);
+	@section_slug : extract(@section_slugs, @curr);
+
+	.create-section-elements-bar(@section_name, @section_slug);
+
+}
+
+.create-section-elements-bar(@section, @name) {
+
+	.shopkit-elements-bar-@{name} {
+		@font_color: "@{section}_font_color";
+		@font_family: "@{section}_font_family";
+		@font_size: "@{section}_font_size";
+		@font_style: "@{section}_font_style";
+		@font_variant: "@{section}_font_variant";
+		@font_weight: "@{section}_font_weight";
+		@letter_spacing: "@{section}_letter_spacing";
+		@line_height: "@{section}_line_height";
+		@text_decoration: "@{section}_text_decoration";
+		@text_transform: "@{section}_text_transform";
+
+		@link: "@{section}_link";
+		@link_hover: "@{section}_link_hover";
+		@separator: "@{section}_separator";
+		@background_color: "@{section}_background_color";
+
+		@background: "@{section}_background";
+		@background_image: "@{section}_background_image";
+		@background_repeat: "@{section}_background_repeat";
+		@background_attachment: "@{section}_background_attachment";
+		@background_position: "@{section}_background_position";
+		@background_size: "@{section}_background_size";
+
+		@boxshadow_active: "@{section}_boxshadow_active";
+		@boxshadow: "@{section}_boxshadow";
+
+		@padding: "@{section}_padding";
+		@padding_bottom: "@{section}_padding_bottom";
+		@outer_elements_align: "@{section}_outer_elements_align";
+		@inner_elements_align: "@{section}_inner_elements_align";
+
+		@collapse_height: "@{section}_type_height";
+
+		color:@@font_color;
+		background-color:@@background_color;
+
+
+		.create-shadow(@@boxshadow_active, @@boxshadow);
+		.create-background(@@background, @@background_image, @@background_repeat, @@background_attachment, @@background_position, @@background_size);
+
+		@menu: "@{section}_menu";
+		@menu_effect: "@{section}_menu_effect";
+		@menu_length: "@{section}_menu_length";
+
+		@menu_font_color: "@{section}_menu_font_color";
+		@menu_font_hover: "@{section}_menu_font_hover";
+		@menu_background_active: "@{section}_menu_background_active";
+		@submenu_font_color: "@{section}_submenu_font_color";
+		@submenu_font_hover: "@{section}_submenu_font_hover";
+		@submenu_background_active: "@{section}_submenu_background_active";
+		@submenu_background: "@{section}_submenu_background";
+
+		@nameSpace: @section;
+
+		.create-menus(@section, @@menu, @@menu_effect, @@menu_length, @@menu_font_color, @@menu_font_hover, @@menu_background_active, @@submenu_font_color, @@submenu_font_hover, @@submenu_background_active, @@submenu_background);
+
+		.create-forms(@@line_height, @@font_color, @@link, @@background_color);
+
+		a,
+		button {
+			text-decoration:none;
+			color:@@link;
+		}
+			a:hover,
+			button:hover {
+				color:@@link_hover;
+			}
+
+		a.shopkit-svg {
+			color:@@link;
+		}
+			a:hover.shopkit-svg {
+				color:@@link_hover;
+			}
+
+		a svg.shopkit-svg,
+		button svg.shopkit-svg {
+			fill:@@link;
+		}
+			a:hover svg.shopkit-svg,
+			button:hover svg.shopkit-svg {
+				fill:@@link_hover;
+			}
+
+		.shopkit-inner-wrapper {
+			padding:@@padding;
+		}
+
+		.shopkit-section {
+			vertical-align:@@outer_elements_align;
+
+			font-family:@@font_family;
+			font-size:@@font_size;
+			font-style:@@font_style;
+			font-variant:@@font_variant;
+			font-weight:@@font_weight;
+			letter-spacing:@@letter_spacing;
+			line-height:@@line_height;
+			text-decoration:@@text_decoration;
+			text-transform:@@text_transform;
+		}
+
+		.shopkit-layout-element {
+			vertical-align:@@inner_elements_align;
+		}
+
+		.shopkit-layout-element-separator {
+			background-color:@@separator;
+		}
+
+		.shopkit-login.shopkit-active .shopkit-login-items-wrapper {
+			color:@@font_color;
+			background-color:@@background_color;
+		}
+		.shopkit-login.shopkit-active .shopkit-login-items-wrapper label span {
+			color:@@link;
+		}
+
+		.shopkit-cart .shopkit-cart-summary {
+
+			background-color:@@link;
+			&:hover {
+				background-color:@@link_hover;
+			}
+			a {
+				color: contrast(@@link, #fff, #222);
+			}
+			&:hover {
+				.shopkit-cart-item-summary a {
+					color:@@link;
+				}
+				svg {
+					fill:@@link;
+				}
+				a {
+					color: contrast(@@link_hover, #fff, #222);
+				}
+			}
+		}
+		.shopkit-cart-icon-background {
+			fill:@@background_color;
+			stroke:@@link;
+			stroke-width:1.6;
+		}
+		a:hover .shopkit-cart-icon-background {
+			stroke:@@link_hover;
+		}
+
+		.shopkit-cart {
+
+			.shopkit-cart-items-wrapper {
+				background-color:#f4f4f4;
+			}
+
+		}
+		.shopkit-search-form-wrapper {
+			input {
+				line-height:@@line_height;
+			}
+		}
+
+		.create-heading(~"@{section}", ~"h1");
+		.create-heading(~"@{section}", ~"h2");
+		.create-heading(~"@{section}", ~"h3");
+		.create-heading(~"@{section}", ~"h4");
+		.create-heading(~"@{section}", ~"h5");
+		.create-heading(~"@{section}", ~"h6");
+
+		@import (multiple) "_collapse_height";
+
+		button.button,
+		button[type="submit"]:not(.icon),
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
+		.button,
+		.button + .added_to_cart {
+
+			@import (multiple) "_button";
+
+		}
+
+		a.shopkit-cart-icon span {
+			border-color:@@link;
+		}
+		a.shopkit-cart-icon:hover span {
+			border-color:@@link_hover;
+		}
+
+	}
+}
+
+
+/*------------------------------------------------------------------
+[Widget Sections]
+-------------------------------------------------------------------*/
+
+.create-sections-widget-section(@section_names, @section_slugs, @curr) when (@curr > 0) {
+
+	.create-sections-widget-section(@section_names; @section_slugs; (@curr - 1));
+
+	@section_name  : extract(@section_names, @curr);
+	@section_slug : extract(@section_slugs, @curr);
+
+	.create-section-widget-section(@section_name, @section_slug);
+
+}
+
+.create-section-widget-section(@section, @name) {
+
+	@font_color: "@{section}_font_color";
+	@font_family: "@{section}_font_family";
+	@font_size: "@{section}_font_size";
+	@font_style: "@{section}_font_style";
+	@font_variant: "@{section}_font_variant";
+	@font_weight: "@{section}_font_weight";
+	@letter_spacing: "@{section}_letter_spacing";
+	@line_height: "@{section}_line_height";
+	@text_decoration: "@{section}_text_decoration";
+	@text_transform: "@{section}_text_transform";
+
+	@link: "@{section}_link";
+	@link_hover: "@{section}_link_hover";
+	@separator: "@{section}_separator";
+	@background_color: "@{section}_background_color";
+
+	@background: "@{section}_background";
+	@background_image: "@{section}_background_image";
+	@background_repeat: "@{section}_background_repeat";
+	@background_attachment: "@{section}_background_attachment";
+	@background_position: "@{section}_background_position";
+	@background_size: "@{section}_background_size";
+
+	@boxshadow_active: "@{section}_boxshadow_active";
+	@boxshadow: "@{section}_boxshadow";
+
+	@padding: "@{section}_padding";
+	@padding_bottom: "@{section}_padding_bottom";
+
+	@collapse_height: "@{section}_type_height";
+
+	@margin_override: "@{section}_margin_override";
+	@override_columns_margin: "@{section}_columns_margin";
+	@override_rows_margin: "@{section}_rows_margin";
+
+	.shopkit-widgets-@{name} {
+
+		color:@@font_color;
+		background-color:@@background_color;
+
+		.create-shadow(@@boxshadow_active, @@boxshadow);
+		.create-background(@@background, @@background_image, @@background_repeat, @@background_attachment, @@background_position, @@background_size);
+
+		font-family:@@font_family;
+		font-size:@@font_size;
+		font-style:@@font_style;
+		font-variant:@@font_variant;
+		font-weight:@@font_weight;
+		letter-spacing:@@letter_spacing;
+		line-height:@@line_height;
+		text-decoration:@@text_decoration;
+		text-transform:@@text_transform;
+
+		a {
+			color:@@link;
+		}
+			a:hover {
+				color:@@link_hover;
+			}
+
+		.create-forms(@@line_height, @@font_color, @@link, @@background_color);
+
+		.shopkit-inner-wrapper {
+			padding:@@padding;
+		}
+		.shopkit-columns {
+			margin-bottom:0;
+		}
+
+		.create-heading(~"@{section}", ~"h1");
+		.create-heading(~"@{section}", ~"h2");
+		.create-heading(~"@{section}", ~"h3");
+		.create-heading(~"@{section}", ~"h4");
+		.create-heading(~"@{section}", ~"h5");
+		.create-heading(~"@{section}", ~"h6");
+
+		@import (multiple) "_collapse_height";
+
+		button.button,
+		button[type="submit"]:not(.icon),
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
+		.button,
+		.button + .added_to_cart {
+
+			@import (multiple) "_button";
+
+		}
+
+		.widget_nav_menu {
+			.current-menu-item a {
+				color:@@link_hover;
+			}
+			.current-menu-item a:hover {
+				color:@@link;
+			}
+		}
+
+		.woocommerce {
+			ul {
+				&.cart_list,
+				&.product_list_widget {
+					li {
+						border-top:1px solid @@separator;
+						&:first-child {
+							border:0;
+						}
+					}
+				}
+			}
+		}
+		.product_list_widget {
+			li {
+				del {
+					color: @@separator;
+					&:after {
+						background-color: @@separator;
+					}
+				}
+			}
+		}
+
+		.product_list_widget {
+			li {
+				ins {
+					color: @@font_color;
+				}
+			}
+		}
+
+	}
+
+	.create-widget-custom-margins(@@margin_override, @@override_columns_margin, @@override_rows_margin, @name);
+
+}
+
+
+/*------------------------------------------------------------------
+[Content,HTML Sections]
+-------------------------------------------------------------------*/
+
+.create-sections-content-text-html(@section_names, @section_slugs, @curr) when (@curr > 0) {
+
+	.create-sections-content-text-html(@section_names; @section_slugs; (@curr - 1));
+
+	@section_name : extract(@section_names, @curr);
+	@section_slug : extract(@section_slugs, @curr);
+
+	.create-section-content-text-html(@section_name, @section_slug);
+
+}
+
+.create-section-content-text-html(@section, @name) {
+
+	.shopkit-content-text-html-@{name} {
+		@font_color: "@{section}_font_color";
+		@font_family: "@{section}_font_family";
+		@font_size: "@{section}_font_size";
+		@font_style: "@{section}_font_style";
+		@font_variant: "@{section}_font_variant";
+		@font_weight: "@{section}_font_weight";
+		@letter_spacing: "@{section}_letter_spacing";
+		@line_height: "@{section}_line_height";
+		@text_decoration: "@{section}_text_decoration";
+		@text_transform: "@{section}_text_transform";
+
+		@link: "@{section}_link";
+		@link_hover: "@{section}_link_hover";
+		@separator: "@{section}_separator";
+		@background_color: "@{section}_background_color";
+
+		@background: "@{section}_background";
+		@background_image: "@{section}_background_image";
+		@background_repeat: "@{section}_background_repeat";
+		@background_attachment: "@{section}_background_attachment";
+		@background_position: "@{section}_background_position";
+		@background_size: "@{section}_background_size";
+
+		@boxshadow_active: "@{section}_boxshadow_active";
+		@boxshadow: "@{section}_boxshadow";
+
+		@padding: "@{section}_padding";
+		@padding_bottom: "@{section}_padding_bottom";
+
+		@collapse_height: "@{section}_type_height";
+
+		color:@@font_color;
+		background-color:@@background_color;
+
+		.create-shadow(@@boxshadow_active, @@boxshadow);
+		.create-background(@@background, @@background_image, @@background_repeat, @@background_attachment, @@background_position, @@background_size);
+
+		font-family:@@font_family;
+		font-size:@@font_size;
+		font-style:@@font_style;
+		font-variant:@@font_variant;
+		font-weight:@@font_weight;
+		letter-spacing:@@letter_spacing;
+		line-height:@@line_height;
+		text-decoration:@@text_decoration;
+		text-transform:@@text_transform;
+
+		a {
+			color:@@link;
+		}
+			a:hover {
+				color:@@link_hover;
+			}
+
+		.create-forms(@@line_height, @@font_color, @@link, @@background_color);
+
+		.shopkit-inner-wrapper {
+			padding:@@padding;
+		}
+
+		.shopkit-columns {
+			margin-bottom:-@rows_margin*1px;
+		}
+
+		.create-heading(~"@{section}", ~"h1");
+		.create-heading(~"@{section}", ~"h2");
+		.create-heading(~"@{section}", ~"h3");
+		.create-heading(~"@{section}", ~"h4");
+		.create-heading(~"@{section}", ~"h5");
+		.create-heading(~"@{section}", ~"h6");
+
+		button.button,
+		button[type="submit"]:not(.icon),
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
+		.button,
+		.button + .added_to_cart {
+
+			@import (multiple) "_button";
+
+		}
+
+		@import (multiple) "_collapse_height";
+
+	}
+
+}

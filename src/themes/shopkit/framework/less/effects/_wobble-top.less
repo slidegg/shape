@@ -1,0 +1,45 @@
+/* Wobble Top */
+.keyframes(~"@{nameSpace}-wobble-top", {
+	16.65% {
+		.prefixed(transform, skew(-12deg));
+	}
+
+	33.3% {
+		.prefixed(transform, skew(10deg));
+	}
+
+	49.95% {
+		.prefixed(transform, skew(-6deg));
+	}
+
+	66.6% {
+		.prefixed(transform, skew(4deg));
+	}
+
+	83.25% {
+		.prefixed(transform, skew(-2deg));
+	}
+
+	100% {
+		.prefixed(transform, skew(0));
+	}
+});
+
+& > a {
+	.hacks();
+	.prefixed(transform-origin, 0 100%);
+	.prefixed(transition-property, ~"background-color");
+}
+
+&:hover > a,
+&:focus > a,
+&:active > a,
+&.current-menu-ancestor > a,
+&.current-menu-item > a,
+&.current_page_item > a {
+	.prefixed(animation-name, ~"@{nameSpace}-wobble-top");
+	.prefixed(animation-duration, 1s);
+	.prefixed(animation-timing-function, ease-in-out);
+	.prefixed(animation-iteration-count, 1);
+	background-color:@activeColor;
+}

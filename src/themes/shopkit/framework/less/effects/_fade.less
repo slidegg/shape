@@ -1,0 +1,13 @@
+/* Fade */
+.hacks();
+.prefixed(transition-duration, @mediumDuration);
+.prefixed(transition-property, ~"color, background-color");
+
+&:hover,
+&:focus,
+&:active,
+&.current-menu-ancestor,
+&.current-menu-item,
+&.current_page_item {
+	background-color: @activeColor;
+}

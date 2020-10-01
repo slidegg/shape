@@ -1,0 +1,80 @@
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@import "variables";
+@import 'greg';
+@import 'cart';
+@import 'checkout';
+@import "font-awesome/scss/fontawesome";
+@import "font-awesome/scss/light";
+@import "font-awesome/scss/regular";
+@import "font-awesome/scss/solid";
+@import 'prdctfltr';
+@import 'product_box';
+@import 'stock_status';
+
+//commented
+@import 'header_menu';
+@import 'header';
+@import 'catalog_categories_widget';
+@import 'login';
+@import 'woo_archive';
+
+
+.clearfix {
+  @include clearfix();
+}
+
+.onbackorder .svg-addCartIcon {
+  display: block;
+}
+
+//remove paddings metaksy menu k body kai sthn Home
+.home {
+  #main {
+    padding-top: 0 !important;
+  }
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  text-align: left;
+  line-height: 32px;
+}
+
+.site-content {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+//my-account page
+.woocommerce-account {
+  .woocommerce-privacy-policy-text p {
+    margin: 15px 0 !important;
+  }
+    .col-1, .col-2 {
+      margin-top: 10px !important;
+    }
+
+    @media only screen and (min-width: 1120px) {
+      .col-1 {
+        width: 40% !important;
+        float: left !important;
+      }
+      .col-2 {
+        width: 60% !important;
+        float: right !important;
+      }
+    }
+  }
+
+//login popup
+.shopkit-login .shopkit-login-items-wrapper {
+  max-width: 490px !important;
+}

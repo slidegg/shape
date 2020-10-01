@@ -1,0 +1,38 @@
+/* Bubble Float Top */
+& > a {
+	.hacks();
+	position: relative;
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"transform, background-color");
+}
+
+& > a:before {
+	position: absolute;
+	content: '';
+	left: 50%;
+	margin-left:-@tipWidth;
+	top: 0;
+	border-style: solid;
+	border-width: 0 @tipWidth @tipHeight @tipWidth;
+	border-color: transparent;
+	.prefixed(transition-duration, @mediumDuration);
+	.prefixed(transition-property, ~"transform, border-color");
+	opacity:0;
+	z-index: 1;
+}
+
+&:hover > a,
+&:focus > a,
+&:active > a,
+&.current-menu-ancestor,
+&.current-menu-item,
+&.current_page_item {
+	.prefixed(transform, translateY(@tipHeight));
+	background-color:@activeColor;
+
+	&:before {
+		.prefixed(transform, translateY(-(@tipHeight)));
+		border-color: transparent transparent @activeColor transparent;
+		opacity:1;
+	}
+}
