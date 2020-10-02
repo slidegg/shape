@@ -5,11 +5,11 @@
     clear: both;
   }
 }
-//import css
-@import "../css/cart.css";
-@import "../css/catalog_categories_widget.css";
-@import "../css/checkout.css";
-@import "../css/header.css";
+//import css FIXME CHECK IF THEY WORK OR REMOVE THEM GREG
+@import "../css/cart";
+@import "../css/catalog_categories_widget";
+@import "../css/checkout";
+@import "../css/header";
 //import scss
 @import "variables";
 @import 'greg';
