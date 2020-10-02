@@ -1,0 +1,127 @@
+2020-10-01T23:43:05+00:00 CRITICAL Uncaught Error: Class 'yii1\models\wc\Product' not found in /var/www/html/wp-content/themes/shopkit-child-flat/functions/product_empty_prices.php:9
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}(true, Object(WC_Product_Simple))
+#1 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters(true, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php(1543): apply_filters('woocommerce_is_...', true, Object(WC_Product_Simple))
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(678): WC_Product->is_purchasable()
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(719): wc_get_product_class(Array, Object(WC_Product_Simple))
+#5 /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php(27): wc_product_class('', Object(WC_Product_Simple))
+#6 /var/www/html/wp-includes/template.php(732): require('/var/www/html/w...')
+#7 /var/www/html/wp-content/plugins/woocommerce in /var/www/html/wp-content/themes/shopkit-child-flat/functions/product_empty_prices.php on line 9
+
+2020-10-01T23:43:19+00:00 CRITICAL Uncaught Error: Class 'StockStatus' not found in /var/www/html/wp-content/themes/shopkit-child-flat/functions.php:71
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php(57): do_action('woocommerce_aft...')
+#4 /var/www/html/wp-includes/template.php(732): require('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(283): load_template('/var/www/html/w...', false)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#7 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(100): WC_Shortcode_Products->product_loop()
+#8 /var/www/html/wp-content/plugins/woocommerce/includ in /var/www/html/wp-content/themes/shopkit-child-flat/functions.php on line 71
+
+2020-10-01T23:43:51+00:00 CRITICAL Uncaught Error: Class 'StockStatus' not found in /var/www/html/wp-content/themes/shopkit-child-flat/functions.php:71
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php(57): do_action('woocommerce_aft...')
+#4 /var/www/html/wp-includes/template.php(732): require('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(283): load_template('/var/www/html/w...', false)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#7 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(100): WC_Shortcode_Products->product_loop()
+#8 /var/www/html/wp-content/plugins/woocommerce/includ in /var/www/html/wp-content/themes/shopkit-child-flat/functions.php on line 71
+
+2020-10-01T23:48:04+00:00 CRITICAL Uncaught Error: Class 'StockStatus' not found in /var/www/html/wp-content/themes/shopkit-child-flat/functions.php:71
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php(57): do_action('woocommerce_aft...')
+#4 /var/www/html/wp-includes/template.php(732): require('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(283): load_template('/var/www/html/w...', false)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#7 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(100): WC_Shortcode_Products->product_loop()
+#8 /var/www/html/wp-content/plugins/woocommerce/includ in /var/www/html/wp-content/themes/shopkit-child-flat/functions.php on line 71
+
+2020-10-01T23:48:15+00:00 CRITICAL Uncaught Error: Class 'StockStatus' not found in /var/www/html/wp-content/themes/shopkit-child-flat/functions.php:71
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php(57): do_action('woocommerce_aft...')
+#4 /var/www/html/wp-includes/template.php(732): require('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(283): load_template('/var/www/html/w...', false)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#7 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(100): WC_Shortcode_Products->product_loop()
+#8 /var/www/html/wp-content/plugins/woocommerce/includ in /var/www/html/wp-content/themes/shopkit-child-flat/functions.php on line 71
+
+2020-10-01T23:48:31+00:00 CRITICAL Uncaught Error: Class 'yii1\models\wc\Product' not found in /var/www/html/wp-content/themes/shopkit-child-flat/functions/product_empty_prices.php:9
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}(true, Object(WC_Product_Simple))
+#1 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters(true, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php(1543): apply_filters('woocommerce_is_...', true, Object(WC_Product_Simple))
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(678): WC_Product->is_purchasable()
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(719): wc_get_product_class(Array, Object(WC_Product_Simple))
+#5 /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php(27): wc_product_class('', Object(WC_Product_Simple))
+#6 /var/www/html/wp-includes/template.php(732): require('/var/www/html/w...')
+#7 /var/www/html/wp-content/plugins/woocommerce in /var/www/html/wp-content/themes/shopkit-child-flat/functions/product_empty_prices.php on line 9
+
+2020-10-01T23:49:07+00:00 CRITICAL Uncaught Error: Class 'yii1\models\wc\Product' not found in /var/www/html/wp-content/themes/shopkit-child-flat/functions/product_empty_prices.php:9
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}(true, Object(WC_Product_Simple))
+#1 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters(true, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php(1543): apply_filters('woocommerce_is_...', true, Object(WC_Product_Simple))
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(678): WC_Product->is_purchasable()
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(719): wc_get_product_class(Array, Object(WC_Product_Simple))
+#5 /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php(27): wc_product_class('', Object(WC_Product_Simple))
+#6 /var/www/html/wp-includes/template.php(732): require('/var/www/html/w...')
+#7 /var/www/html/wp-content/plugins/woocommerce in /var/www/html/wp-content/themes/shopkit-child-flat/functions/product_empty_prices.php on line 9
+
+2020-10-01T23:49:15+00:00 CRITICAL Uncaught Error: Class 'yii1\models\wc\Product' not found in /var/www/html/wp-content/themes/shopkit-child-flat/functions/product_empty_prices.php:9
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}(true, Object(WC_Product_Simple))
+#1 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters(true, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php(1543): apply_filters('woocommerce_is_...', true, Object(WC_Product_Simple))
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(678): WC_Product->is_purchasable()
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(719): wc_get_product_class(Array, Object(WC_Product_Simple))
+#5 /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php(27): wc_product_class('', Object(WC_Product_Simple))
+#6 /var/www/html/wp-includes/template.php(732): require('/var/www/html/w...')
+#7 /var/www/html/wp-content/plugins/woocommerce in /var/www/html/wp-content/themes/shopkit-child-flat/functions/product_empty_prices.php on line 9
+
+2020-10-01T23:50:19+00:00 CRITICAL Uncaught Error: Class 'yii1\models\wc\Product' not found in /var/www/html/wp-content/themes/shopkit-child-flat/functions/product_empty_prices.php:9
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}(true, Object(WC_Product_Simple))
+#1 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters(true, Array)
+#2 /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php(1543): apply_filters('woocommerce_is_...', true, Object(WC_Product_Simple))
+#3 /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(678): WC_Product->is_purchasable()
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(719): wc_get_product_class(Array, Object(WC_Product_Simple))
+#5 /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php(27): wc_product_class('', Object(WC_Product_Simple))
+#6 /var/www/html/wp-includes/template.php(732): require('/var/www/html/w...')
+#7 /var/www/html/wp-content/plugins/woocommerce in /var/www/html/wp-content/themes/shopkit-child-flat/functions/product_empty_prices.php on line 9
+
+2020-10-01T23:52:26+00:00 CRITICAL Uncaught Error: Class 'StockStatus' not found in /var/www/html/wp-content/themes/shopkit-child-flat/functions.php:70
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php(57): do_action('woocommerce_aft...')
+#4 /var/www/html/wp-includes/template.php(732): require('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(283): load_template('/var/www/html/w...', false)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#7 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(100): WC_Shortcode_Products->product_loop()
+#8 /var/www/html/wp-content/plugins/woocommerce/includ in /var/www/html/wp-content/themes/shopkit-child-flat/functions.php on line 70
+
+2020-10-01T23:59:12+00:00 CRITICAL Uncaught Error: Class 'StockStatus' not found in /var/www/html/wp-content/themes/shopkit-child-flat/functions.php:69
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php(57): do_action('woocommerce_aft...')
+#4 /var/www/html/wp-includes/template.php(732): require('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(283): load_template('/var/www/html/w...', false)
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(660): wc_get_template_part('content', 'product')
+#7 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php(100): WC_Shortcode_Products->product_loop()
+#8 /var/www/html/wp-content/plugins/woocommerce/includ in /var/www/html/wp-content/themes/shopkit-child-flat/functions.php on line 69
+

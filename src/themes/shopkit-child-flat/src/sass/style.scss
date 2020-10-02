@@ -5,7 +5,12 @@
     clear: both;
   }
 }
-
+//import css
+@import "../css/cart.css";
+@import "../css/catalog_categories_widget.css";
+@import "../css/checkout.css";
+@import "../css/header.css";
+//import scss
 @import "variables";
 @import 'greg';
 @import 'cart';

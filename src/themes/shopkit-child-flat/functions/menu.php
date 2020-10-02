@@ -74,7 +74,7 @@ add_filter('wp_nav_menu_items', static function ($items, $args) {
             }
             $second_items = null; // clear submenu for next
         }
-        $items .= '<li class="menu-item"><a href="' . get_option( 'siteurl' ) . '/contact">Επικοινωνία</a></li>'; //add Contact page as last menu page of menu
+        $items .= '<li class="menu-item"><a href="' . get_option( 'siteurl' ) . '/contact">Contact</a></li>'; //add Contact page as last menu page of menu
     }
 
     return str_replace(array('ά','έ','ή','ί','ό','ύ','ώ'), array('α','ε','η','ι','ο','υ','ω'), $items ); //afairesi tonwn - Safari browser fix

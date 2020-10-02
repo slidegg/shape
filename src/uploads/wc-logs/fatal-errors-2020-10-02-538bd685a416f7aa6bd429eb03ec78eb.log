@@ -1,0 +1,117 @@
+2020-10-02T00:02:22+00:00 CRITICAL Uncaught Error: Call to undefined function tidy_repair_string() in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php:44
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}(Object(WC_Shipping_Rate), 0)
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/cart/cart-shipping.php(41): do_action('woocommerce_aft...', Object(WC_Shipping_Rate), 0)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-cart-functions.php(235): wc_get_template('cart/cart-shipp...', Array)
+#6 /var/www/html/wp-content/themes/shopkit-child-flat/functions/checkout/layout.php(46): wc_cart_totals_shipping_html()
+#7 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#8 /var/www/html/wp-includes/class-wp in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php on line 44
+
+2020-10-02T00:02:29+00:00 CRITICAL Uncaught Error: Call to undefined function tidy_repair_string() in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php:44
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}(Object(WC_Shipping_Rate), 0)
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/cart/cart-shipping.php(41): do_action('woocommerce_aft...', Object(WC_Shipping_Rate), 0)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-cart-functions.php(235): wc_get_template('cart/cart-shipp...', Array)
+#6 /var/www/html/wp-content/themes/shopkit-child-flat/functions/checkout/layout.php(46): wc_cart_totals_shipping_html()
+#7 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#8 /var/www/html/wp-includes/class-wp in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php on line 44
+
+2020-10-02T00:06:08+00:00 CRITICAL Uncaught Error: Call to undefined function tidy_repair_string() in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php:44
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}(Object(WC_Shipping_Rate), 0)
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/cart/cart-shipping.php(41): do_action('woocommerce_aft...', Object(WC_Shipping_Rate), 0)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-cart-functions.php(235): wc_get_template('cart/cart-shipp...', Array)
+#6 /var/www/html/wp-content/themes/shopkit-child-flat/functions/checkout/layout.php(46): wc_cart_totals_shipping_html()
+#7 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#8 /var/www/html/wp-includes/class-wp in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php on line 44
+
+2020-10-02T00:06:14+00:00 CRITICAL Uncaught Error: Call to undefined function tidy_repair_string() in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php:44
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}(Object(WC_Shipping_Rate), 0)
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/cart/cart-shipping.php(41): do_action('woocommerce_aft...', Object(WC_Shipping_Rate), 0)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-cart-functions.php(235): wc_get_template('cart/cart-shipp...', Array)
+#6 /var/www/html/wp-content/themes/shopkit-child-flat/functions/checkout/layout.php(46): wc_cart_totals_shipping_html()
+#7 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#8 /var/www/html/wp-includes/class-wp in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php on line 44
+
+2020-10-02T00:16:02+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in /var/www/html/wp-content/themes/shopkit-child-flat/functions/admin_dashboard.php:47
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('is_in_stock', 27632)
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-admin/includes/class-wp-posts-list-table.php(1271): do_action('manage_product_...', 'is_in_stock', 27632)
+#4 /var/www/html/wp-admin/includes/class-wp-list-table.php(1410): WP_Posts_List_Table->column_default(Object(WP_Post), 'is_in_stock')
+#5 /var/www/html/wp-admin/includes/class-wp-posts-list-table.php(1304): WP_List_Table->single_row_columns(Object(WP_Post))
+#6 /var/www/html/wp-admin/includes/class-wp-posts-list-table.php(751): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#7 /var/www/html/wp-admin/includes/class-wp-posts-list-table.php(728): WP_Posts_List_Table->_display_rows(Array, in /var/www/html/wp-content/themes/shopkit-child-flat/functions/admin_dashboard.php on line 47
+
+2020-10-02T00:16:37+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in /var/www/html/wp-content/themes/shopkit-child-flat/functions/admin_dashboard.php:47
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('is_in_stock', 27632)
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-admin/includes/class-wp-posts-list-table.php(1271): do_action('manage_product_...', 'is_in_stock', 27632)
+#4 /var/www/html/wp-admin/includes/class-wp-list-table.php(1410): WP_Posts_List_Table->column_default(Object(WP_Post), 'is_in_stock')
+#5 /var/www/html/wp-admin/includes/class-wp-posts-list-table.php(1304): WP_List_Table->single_row_columns(Object(WP_Post))
+#6 /var/www/html/wp-admin/includes/class-wp-posts-list-table.php(751): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#7 /var/www/html/wp-admin/includes/class-wp-posts-list-table.php(728): WP_Posts_List_Table->_display_rows(Array, in /var/www/html/wp-content/themes/shopkit-child-flat/functions/admin_dashboard.php on line 47
+
+2020-10-02T00:16:45+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in /var/www/html/wp-content/themes/shopkit-child-flat/functions/admin_dashboard.php:47
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('is_in_stock', 27632)
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-admin/includes/class-wp-posts-list-table.php(1271): do_action('manage_product_...', 'is_in_stock', 27632)
+#4 /var/www/html/wp-admin/includes/class-wp-list-table.php(1410): WP_Posts_List_Table->column_default(Object(WP_Post), 'is_in_stock')
+#5 /var/www/html/wp-admin/includes/class-wp-posts-list-table.php(1304): WP_List_Table->single_row_columns(Object(WP_Post))
+#6 /var/www/html/wp-admin/includes/class-wp-posts-list-table.php(751): WP_Posts_List_Table->single_row(Object(WP_Post), 0)
+#7 /var/www/html/wp-admin/includes/class-wp-posts-list-table.php(728): WP_Posts_List_Table->_display_rows(Array, in /var/www/html/wp-content/themes/shopkit-child-flat/functions/admin_dashboard.php on line 47
+
+2020-10-02T00:52:07+00:00 CRITICAL Uncaught Error: Call to undefined function tidy_repair_string() in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php:44
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}(Object(WC_Shipping_Rate), 0)
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/cart/cart-shipping.php(41): do_action('woocommerce_aft...', Object(WC_Shipping_Rate), 0)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-cart-functions.php(235): wc_get_template('cart/cart-shipp...', Array)
+#6 /var/www/html/wp-content/themes/shopkit-child-flat/functions/checkout/layout.php(46): wc_cart_totals_shipping_html()
+#7 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#8 /var/www/html/wp-includes/class-wp in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php on line 44
+
+2020-10-02T00:54:16+00:00 CRITICAL Uncaught Error: Call to undefined function tidy_repair_string() in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php:44
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}(Object(WC_Shipping_Rate), 0)
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/cart/cart-shipping.php(41): do_action('woocommerce_aft...', Object(WC_Shipping_Rate), 0)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-cart-functions.php(235): wc_get_template('cart/cart-shipp...', Array)
+#6 /var/www/html/wp-content/themes/shopkit-child-flat/functions/checkout/layout.php(46): wc_cart_totals_shipping_html()
+#7 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#8 /var/www/html/wp-includes/class-wp in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php on line 44
+
+2020-10-02T01:05:57+00:00 CRITICAL Uncaught Error: Call to undefined function tidy_repair_string() in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php:44
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}(Object(WC_Shipping_Rate), 0)
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce/templates/cart/cart-shipping.php(41): do_action('woocommerce_aft...', Object(WC_Shipping_Rate), 0)
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/wc-cart-functions.php(235): wc_get_template('cart/cart-shipp...', Array)
+#6 /var/www/html/wp-content/themes/shopkit-child-flat/functions/checkout/layout.php(46): wc_cart_totals_shipping_html()
+#7 /var/www/html/wp-includes/class-wp-hook.php(287): {closure}('')
+#8 /var/www/html/wp-includes/class-wp in /var/www/html/wp-content/themes/shopkit-child-flat/functions/shipping.php on line 44
+

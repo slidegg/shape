@@ -22,7 +22,7 @@ add_filter('woocommerce_registration_errors', function ($reg_errors, $sanitized_
 add_action( 'woocommerce_register_form', function () {
     ?>
     <p class="form-row form-row-wide">
-        <label for="reg_password2"><?php _e( 'Επικύρωση κωδικού', 'woocommerce' ); ?> <span class="required">*</span></label>
+        <label for="reg_password2"><?php _e( 'Repeat password', 'woocommerce' ); ?> <span class="required">*</span></label>
         <input type="password" class="input-text" name="password2" id="reg_password2" value="<?php if ( ! empty( $_POST['password2'] ) ) echo esc_attr( $_POST['password2'] ); ?>" />
     </p>
     <?php
@@ -46,9 +46,9 @@ add_action( 'woocommerce_checkout_init', function ( $checkout ) {
 
         $fields['account']['account_confirm_password'] = array(
             'type'              => 'password',
-            'label'             => __( 'Επικύρωση κωδικού', 'woocommerce' ),
+            'label'             => __( 'Repeat password', 'woocommerce' ),
             'required'          => true,
-            'placeholder'       => _x( 'Επικύρωση κωδικού', 'placeholder', 'woocommerce' )
+            'placeholder'       => _x( 'Repeat password', 'placeholder', 'woocommerce' )
         );
 
         $checkout->__set( 'checkout_fields', $fields );

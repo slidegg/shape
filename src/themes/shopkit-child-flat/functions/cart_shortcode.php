@@ -1,7 +1,6 @@
 <?php
 /**
- * Cart shortcode plugin rippof
- * https://github.com/prontotools/woocommerce-cart-count-shortcode
+ * Cart shortcode plugin
  *
  * USAGE EXAMPLES:
  *
@@ -44,14 +43,11 @@ add_shortcode("cart_button", function ($atts) {
     if (class_exists("WooCommerce")) {
         $cart_count = WC()->cart->get_cart_contents_count();
         $cart_total = WC()->cart->get_cart_total();
-//        $cart_url = WC()->cart->get_cart_url();  ORIGINAL LINE
         $cart_url = '#';
-//        $shop_url = wc_get_page_permalink("shop"); ORIGINAL LINE
         $shop_url = '#';
 
         $cart_count_html = "";
         if ("true" == $atts["show_items"]) {
-//            $cart_count_html = " (" . $cart_count . ")";  /ORIGINAL LINE
             $cart_count_html = $cart_count;
         }
         $cart_count_html = apply_filters('wccs_cart_count_html', '<span class="xoo-wsc-items-count" style="opacity: 1;">' . $cart_count_html . '</span>', $cart_count);
@@ -72,7 +68,7 @@ add_shortcode("cart_button", function ($atts) {
             if ("" != $atts["items_in_cart_text"]) {
                 $cart_text_html = $atts["items_in_cart_text"];
             }
-                        $link_to_page = ' href="' . $cart_url . '"';
+            $link_to_page = ' href="' . $cart_url . '"';
         } else {
             if ("" != $atts["empty_cart_text"]) {
                 $cart_text_html = $atts["empty_cart_text"];
@@ -85,7 +81,6 @@ add_shortcode("cart_button", function ($atts) {
     if ($atts["custom_css"]) {
         $custom_css = ' class="' . $atts["custom_css"] . '"';
     }
-
     $html = "<a" . $link_to_page . $custom_css . ">";
     $html .= $icon_html . $cart_text_html . '(' . $cart_count_html . ')' . $cart_total_html;
     $html .= "</a>";

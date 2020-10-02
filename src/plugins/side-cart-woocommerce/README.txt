@@ -1,27 +1,30 @@
-===WooCommerce Side Cart (Ajax)===
+===WooCommerce Cart===
 Contributors: XootiX
 Donate link: https://www.paypal.me/xootix
-Tags: woocommerce , floating cart , ajax , woocommerce cart , added to cart , cart pop up , added to cart
+Tags: woocommerce , floating cart , woocommerce cart tab , woocommerce cart , added to cart , cart pop up , added to cart
 Requires at least: 3.0.1
-Tested up to: 5.5
-Stable tag: 2.1
+Tested up to: 5.2
+Stable tag: 1.0.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Manage your cart from just a click away with an interactive design.
+Adds a site wide basket icon that displays all added items in the side cart with proceed to checkout button.
 
 == Description ==
 [Live Demo](http://demo.xootix.com/side-cart-for-woocommerce/)
-Say good bye to your woocommerce cart page. With side cart users can access cart items from anywhere on your site.
-Plugin is completely ajax based. ( Ajax? Ehh!! - no refresh )
+Side Cart WooCommerce adds a site wide basket icon that displays the number of products in the cart.
+Customer can see all the cart items directly from the side cart & also remove items.
+Plugin has ajax add to cart feature on single product pages too.
+
 
 
 ### Features And Options:
-* Ajax add to cart & remove
-* Fully Customizable
-	- Choose what to show in cart
-	- Hide cart on specific pages.
-	- Set cart width, height, colors, layout almost everything.
+* Works for all types of products.
+* See all added items in side cart.
+* Proceed to Checkout Button.
+* Remove added items without refreshing page.
+* Choose your own position for cart icon.
+* Fully Customizable.
 
 == Installation ==
 
@@ -36,7 +39,6 @@ Plugin is completely ajax based. ( Ajax? Ehh!! - no refresh )
 Everything is already setup.Just activate the plugin & you are done.
 
 = How to translate? =
-You can use any third party plugin such as Loco Translate for hastle free translations or follow the instructions below
 1. Download PoEdit.
 2. Open the side-cart-woocommerce.pot file in PoEdit. (/plugins/side-cart-woocommerce/languages/
    side-cart-woocommerce.pot)
@@ -49,18 +51,10 @@ You can use any third party plugin such as Loco Translate for hastle free transl
 1. Front End.
 2. General Settings 1
 3. General Settings 2
-4. Style Settings
+4. Style Settings 1
+5. Style Settings 2
 
 == Changelog ==
-
-= 2.1 =
-* Fix - added missing strings for translation
-* Fix - woocommerce_before_calculate_totals not updating
-
-= 2.0 =
-* Fix - Error notices
-
-
 = 1.0.2 =
 * New - Show/Hide on mobile device.
 * New - Hide on particular pages option
@@ -68,3 +62,4 @@ You can use any third party plugin such as Loco Translate for hastle free transl
 
 = 1.0.0 =
 * Initial Public Release.
+

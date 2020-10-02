@@ -1,136 +1,116 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
-
-
-class Xoo_Wsc_Loader{
-
-	protected static $_instance = null;
-
-	public static function get_instance(){
-		if ( is_null( self::$_instance ) ) {
-			self::$_instance = new self();
-		}
-		return self::$_instance;
-	}
-
-	
-	public function __construct(){
-		$this->set_constants();
-		$this->includes();
-		$this->hooks();
-	}
-
-
-	public function set_constants(){
-
-		$this->define( "XOO_WSC_PATH", plugin_dir_path( XOO_WSC_PLUGIN_FILE ) ); // Plugin path
-		$this->define( "XOO_WSC_PLUGIN_BASENAME", plugin_basename( XOO_WSC_PLUGIN_FILE ) );
-		$this->define( "XOO_WSC_URL", untrailingslashit( plugins_url( '/', XOO_WSC_PLUGIN_FILE ) ) ); // plugin url
-		$this->define( "XOO_WSC_VERSION", "2.1" ); //Plugin version
-		$this->define( "XOO_WSC_LITE", true );
-	}
-
-
-	public function define( $constant_name, $constant_value ){
-		if( !defined( $constant_name ) ){
-			define( $constant_name, $constant_value );
-		}
-	}
+/**
+ * Register all actions and filters for the plugin
+ *
+ * Maintain a list of all hooks that are registered throughout
+ * the plugin, and register them with the WordPress API. Call the
+ * run function to execute the list of actions and filters.
+ *
+ */
+class xoo_wsc_Loader {
 
 	/**
-	 * File Includes
-	*/
-	public function includes(){
-
-		//xootix framework
-		require_once XOO_WSC_PATH.'/includes/xoo-framework/xoo-framework.php';
-		require_once XOO_WSC_PATH.'/includes/class-xoo-wsc-helper.php';
-		require_once XOO_WSC_PATH.'/includes/xoo-wsc-functions.php';
-		require_once XOO_WSC_PATH.'/includes/class-xoo-wsc-template-args.php';
-
-		if( $this->is_request( 'frontend' ) ){
-			require_once XOO_WSC_PATH.'/includes/class-xoo-wsc-frontend.php';
-		}
-		
-		if( $this->is_request( 'admin' ) ) {
-			require_once XOO_WSC_PATH.'/admin/class-xoo-wsc-admin-settings.php';
-		}
-
-		require_once XOO_WSC_PATH.'/includes/class-xoo-wsc-cart.php';
-
-	}
-
-
-	/**
-	 * Hooks
-	*/
-	public function hooks(){
-		$this->on_install();
-	}
-
-
-	/**
-	 * What type of request is this?
+	 * The array of actions registered with WordPress.
 	 *
-	 * @param  string $type admin, ajax, cron or frontend.
-	 * @return bool
+	 * @since    1.0.0
+	 * @access   protected
+	 * @var      array    $actions    The actions registered with WordPress to fire when the plugin loads.
 	 */
-	private function is_request( $type ) {
-		switch ( $type ) {
-			case 'admin':
-				return is_admin();
-			case 'ajax':
-				return defined( 'DOING_AJAX' );
-			case 'cron':
-				return defined( 'DOING_CRON' );
-			case 'frontend':
-				return ( ! is_admin() || defined( 'DOING_AJAX' ) ) && ! defined( 'DOING_CRON' );
-		}
-	}
-
+	protected $actions;
 
 	/**
-	* On install
-	*/
-	public function on_install(){
+	 * The array of filters registered with WordPress.
+	 *
+	 * @since    1.0.0
+	 * @access   protected
+	 * @var      array    $filters    The filters registered with WordPress to fire when the plugin loads.
+	 */
+	protected $filters;
 
-		$version_option = 'xoo-wsc-version';
-		$db_version 	= get_option( $version_option );
+	/**
+	 * Initialize the collections used to maintain the actions and filters.
+	 *
+	 * @since    1.0.0
+	 */
+	public function __construct() {
 
-		//If first time installed
-		if( !$db_version ){
-			
-		}
+		$this->actions = array();
+		$this->filters = array();
 
-		if( version_compare( $db_version, XOO_WSC_VERSION, '<') ){
-
-			//Update to current version
-			update_option( $version_option, XOO_WSC_VERSION);
-		}
 	}
 
+	/**
+	 * Add a new action to the collection to be registered with WordPress.
+	 *
+	 * @since    1.0.0
+	 * @param    string               $hook             The name of the WordPress action that is being registered.
+	 * @param    object               $component        A reference to the instance of the object on which the action is defined.
+	 * @param    string               $callback         The name of the function definition on the $component.
+	 * @param    int                  $priority         Optional. he priority at which the function should be fired. Default is 10.
+	 * @param    int                  $accepted_args    Optional. The number of arguments that should be passed to the $callback. Default is 1.
+	 */
+	public function add_action( $hook, $component, $callback, $priority = 10, $accepted_args = 1 ) {
+		$this->actions = $this->add( $this->actions, $hook, $component, $callback, $priority, $accepted_args );
+	}
 
-	public function isSideCartPage(){
+	/**
+	 * Add a new filter to the collection to be registered with WordPress.
+	 *
+	 * @since    1.0.0
+	 * @param    string               $hook             The name of the WordPress filter that is being registered.
+	 * @param    object               $component        A reference to the instance of the object on which the filter is defined.
+	 * @param    string               $callback         The name of the function definition on the $component.
+	 * @param    int                  $priority         Optional. he priority at which the function should be fired. Default is 10.
+	 * @param    int                  $accepted_args    Optional. The number of arguments that should be passed to the $callback. Default is 1
+	 */
+	public function add_filter( $hook, $component, $callback, $priority = 10, $accepted_args = 1 ) {
+		$this->filters = $this->add( $this->filters, $hook, $component, $callback, $priority, $accepted_args );
+	}
 
-		if( isset( $this->isSideCartPage ) ){
-			return $this->isSideCartPage;
+	/**
+	 * A utility function that is used to register the actions and hooks into a single
+	 * collection.
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 * @param    array                $hooks            The collection of hooks that is being registered (that is, actions or filters).
+	 * @param    string               $hook             The name of the WordPress filter that is being registered.
+	 * @param    object               $component        A reference to the instance of the object on which the filter is defined.
+	 * @param    string               $callback         The name of the function definition on the $component.
+	 * @param    int                  $priority         The priority at which the function should be fired.
+	 * @param    int                  $accepted_args    The number of arguments that should be passed to the $callback.
+	 * @return   array                                  The collection of actions and filters registered with WordPress.
+	 */
+	private function add( $hooks, $hook, $component, $callback, $priority, $accepted_args ) {
+
+		$hooks[] = array(
+			'hook'          => $hook,
+			'component'     => $component,
+			'callback'      => $callback,
+			'priority'      => $priority,
+			'accepted_args' => $accepted_args
+		);
+
+		return $hooks;
+
+	}
+
+	/**
+	 * Register the filters and actions with WordPress.
+	 *
+	 * @since    1.0.0
+	 */
+	public function run() {
+
+		foreach ( $this->filters as $hook ) {
+			add_filter( $hook['hook'], array( $hook['component'], $hook['callback'] ), $hook['priority'], $hook['accepted_args'] );
 		}
 
-		if( !trim(xoo_wsc_helper()->get_general_option('m-hide-cart')) ){
-			$hidePages = array();
-		}
-		else{
-			$hidePages = array_map( 'trim', explode( ',', xoo_wsc_helper()->get_general_option('m-hide-cart') ) );
+		foreach ( $this->actions as $hook ) {
+			add_action( $hook['hook'], array( $hook['component'], $hook['callback'] ), $hook['priority'], $hook['accepted_args'] );
 		}
 
-		$this->isSideCartPage = !( !empty( $hidePages ) && ( ( in_array( 'no-woocommerce', $hidePages )  && !is_woocommerce() && !is_cart() && !is_checkout() ) || is_page( $hidePages ) ) || ( is_product() && in_array( get_the_id() , $hidePages ) ) );
-
-		return apply_filters( 'xoo_wsc_is_sidecart_page', $this->isSideCartPage, $hidePages );
 	}
 
 }
-
-?>
