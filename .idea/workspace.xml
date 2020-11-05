@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="84722e18-0464-4cb9-86a3-5142a0c3e67a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/themes/shopkit-child-flat/src/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/shopkit-child-flat/src/sass/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/themes/shopkit-child-flat/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/shopkit-child-flat/style.min.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +43,10 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="84722e18-0464-4cb9-86a3-5142a0c3e67a" name="Default Changelist" comment="" />
